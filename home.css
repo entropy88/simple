@@ -1,0 +1,42 @@
+body {
+    text-align: center;
+    padding: 100px 0 0 0;
+    background-color: #699e3c;
+ }
+
+img{
+    width: 256px;
+    height: 256px;
+    display: block;
+    /* margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: auto; */
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+#loading {
+    -webkit-animation: rotation 30s infinite linear;
+    animation: rotation 30s infinite linear;
+    cursor: pointer;
+}
+
+@keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+#bottomP{
+    text-align-last: center;
+    color:yellowgreen; 
+    text-shadow: 1px 1px black;
+  }
