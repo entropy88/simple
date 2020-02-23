@@ -6,6 +6,11 @@ let articleCompFields = document.getElementsByClassName("articleComp")
 let onlineFields = document.getElementsByClassName("online");
 let traditionalFields = document.getElementsByClassName("traditional");
 
+//activate multiple authorButton
+
+
+
+
 //variables needed to hide/unhide needed/unneeded fields;
 let nonPeriodicalObject = { name: "nonperiodical", arr: nonPeriodicalFields };
 let periodicalObject = { name: "periodical", arr: periodicalFields };
@@ -44,12 +49,51 @@ let dateVisited = (`${dd}/${mm}/${yyyy}`);
 
 //create new empty array on page load
 function work() {
+
+  
+  let addAuthorFieldsButton=document.getElementById("addAuthorFields");
+  addAuthorFieldsButton.addEventListener("click", function(){
+    addAuthorFieldOnClick();
+  })
   return bibliography = [];
+  
 }
 //background img: https://www.wallpaperflare.com/artwork-green-pattern-beehive-patterns-wallpaper-268237
 
+
+//adding input fields for multiple authors
+function addAuthorFieldOnClick(){
+
+  let newAuthorInputField=document.createElement("input");
+  newAuthorInputField.classList.add("authorInputField");
+    //find authirsdivdiv
+let authorsDiv=document.getElementById("authorsDiv");
+authorsDiv.append(newAuthorInputField)
+  
+
+}
+
+//get authors from all the fields
+function getAuthors(){
+
+  let allAuthorFields=Array.from(document.getElementsByClassName("authorInputField"));
+
+  let allAuthors=[];
+  allAuthorFields.forEach(auf=>{
+    let auVal=auf.value;
+    if (auVal.length>0 && auVal.includes(" ")){
+      let [fn, sn]=auVal.split(" ");
+      allAuthors.push({fn,sn})
+    } 
+})
+console.log(allAuthors)
+
+
+}
+
 //main function
 function getInfo() {
+  getAuthors();
   let newRecord = {};
 
   let invertedAuthors = "";

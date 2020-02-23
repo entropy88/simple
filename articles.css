@@ -52,6 +52,7 @@ h3{
 
 .buttonsMenu{
   background-color:#699e3c;
+  text-shadow: 1px 1px black;
    color: whitesmoke;
    border: none;
    padding: 2%;

@@ -5,6 +5,7 @@ body {
 
 h3{
   color:whitesmoke;
+  text-shadow: 1px 1px black;
 }
 
 #chaosIcon{
@@ -53,6 +54,7 @@ h3{
 }
 .buttonsMenu{
   background-color:#699e3c;
+  text-shadow: 1px 1px black;
    color: whitesmoke;
    border: none;
    padding: 2%;
@@ -97,10 +99,15 @@ a {
     color:  whitesmoke;
 }
 
-#bottomP{
-  text-align-last: center;
+.footer{ 
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+color: whitesmoke;
+text-shadow: 1px 1px black;
+  text-align: center;
 }
-
  
 
 

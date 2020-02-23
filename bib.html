@@ -14,35 +14,41 @@
     <!--create menu-->
 
     <script src="menu.js"></script>
-    
+
 
     <div class="dropdown">
-      <img src="Chaosphere.png"  id="chaosIcon" onclick="myMenu()" class="dropbtn"></img>
-      <div id="myDropdown" class="dropdown-content">
-        <button class="buttonsMenu" onclick="window.location.href = 'bib.html';">Библиограф онлайн</button>
-        <button class="buttonsMenu" onclick="window.location.href = 'articles.html';"> Статии</button>
-        <button class="buttonsMenu" onclick="window.location.href = 'resources.html';">Ресурси</button>
-        <button class="buttonsMenu" onclick="window.location.href = 'about.html';">За сайта</button>
-      </div>
+        <img src="Chaosphere.png" id="chaosIcon" onclick="myMenu()" class="dropbtn"></img>
+        <div id="myDropdown" class="dropdown-content">
+            <button class="buttonsMenu" onclick="window.location.href = 'bib.html';">Библиограф онлайн</button>
+            <button class="buttonsMenu" onclick="window.location.href = 'articles.html';"> Статии</button>
+            <button class="buttonsMenu" onclick="window.location.href = 'resources.html';">Ресурси</button>
+            <button class="buttonsMenu" onclick="window.location.href = 'about.html';">За сайта</button>
+        </div>
     </div>
 
     <div id="main">
-<div id=buttonsBar>
-        
-        <button class="buttonsMain" id="book" onclick="book()" style="background: rgba(0, 0, 0, 0.4);">Книга</button>
-        <button class="buttonsMain" id="article" onclick="article()">Статия в периодично издание</button>
-        <button class="buttonsMain" id="articleComp" onclick="articleComp()">Статия в сборник</button>
-        <button class="buttonsMain" id="online" onclick="online()">Интернет страница</button>
-</div>
+        <div id=buttonsBar>
 
-        <div id="authorD">
-            <p>Автор*:
-                <input type="text" id="authorsInput" class="inputField">
-            </p>
-            <p class="clarification">*При повече от един автор, разделете авторите с (; ).
-                Пример: "Иван Иванов; Петър Петров"
-            </p>
+            <button class="buttonsMain" id="book" onclick="book()"
+                style="background: rgba(0, 0, 0, 0.4);">Книга</button>
+            <button class="buttonsMain" id="article" onclick="article()">Статия в периодично издание</button>
+            <button class="buttonsMain" id="articleComp" onclick="articleComp()">Статия в сборник</button>
+            <button class="buttonsMain" id="online" onclick="online()">Интернет страница</button>
         </div>
+        <div id="authorsDiv"
+        style="background-color:red;">
+            <div id="authorD">
+                <p>Автор*:
+                    <input type="text" id="authorsInput" class="authorInputField">
+                </p>
+
+                <button id="addAuthorFields">+</button>
+                <!-- <p class="clarification">*При повече от един автор, разделете авторите с (; ).
+                Пример: "Иван Иванов; Петър Петров"
+            </p> -->
+            </div>
+        </div>
+        <hr>
 
 
         <p>Заглавие:<input type="text" id="titleInput" class="inputField"></p>
@@ -156,6 +162,7 @@
             <button id="generate" class="buttons" onclick="getInfo();">Добави запис</button>
         </div>
 
+        
         <div id="recordField">
             <p>Библиография: </p>
         </div>
