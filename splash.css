@@ -1,0 +1,31 @@
+body {
+    text-align: center;
+    padding: 100px 0 0 0;
+    background-color: #699e3c;
+ }
+
+
+#loading {
+    -webkit-animation: rotation 30s infinite linear;
+    animation: rotation 30s infinite linear;
+    cursor: pointer;
+}
+
+@keyframes rotation {
+    from {
+            -webkit-transform: rotate(0deg);
+    }
+    to {
+            -webkit-transform: rotate(359deg);
+    }
+}
+
+.footer{ 
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+  color: whitesmoke;
+  text-shadow: 1px 1px black;
+    text-align: center;
+  }

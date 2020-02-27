@@ -205,6 +205,13 @@ input[type=text]:disabled {
     }
 
   
-    #bottomP{
-      text-align-last: center;
+    .footer{ 
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    color: whitesmoke;
+    text-shadow: 1px 1px black;
+      text-align: center;
     }
+     

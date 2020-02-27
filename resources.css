@@ -72,7 +72,7 @@ body {
          margin-left: auto;
         margin-right: auto;
         text-align:justify;
-        width: 28%;
+        width: 25%;
         padding: 3%;  
         background-color:#699e3c;  
         border-radius: 25px;
@@ -90,7 +90,6 @@ body {
  border-radius: 25%;
  margin-right: 8px;
  background:whitesmoke;
-
    }
 
 img{
@@ -139,6 +138,13 @@ li:hover{
     position: relative;  
  }  
 
- #bottomP{
-  text-align-last: center;
+ .footer{ 
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+color: whitesmoke;
+text-shadow: 1px 1px black;
+  text-align: center;
 }
+ 
