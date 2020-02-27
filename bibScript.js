@@ -81,44 +81,62 @@ function getAuthors(){
   let allAuthors=[];
   allAuthorFields.forEach(auf=>{
     let auVal=auf.value;
-    if (auVal.length>0 && auVal.includes(" ")){
+
+    if (auVal.length>0 && auVal!==" "){
+      if (auVal.includes(" ")){
+      console.log(auVal)
+      //to remove multiple empty spaces
+      auVal = auVal.replace(/  +/g, ' ');
+      console.log(auVal);
+
       let [fn, sn]=auVal.split(" ");
-      allAuthors.push({fn,sn})
+      console.log(sn)
+      console.log(fn)
+      console.log(`${sn}istherespace+${fn}isthereanyspace`)
+      allAuthors.push(sn+", "+fn);
+      }
+      else {
+        allAuthors.push(auVal)
+      }
+     
     } 
 })
-console.log(allAuthors)
 
+let authorsReady=allAuthors.join(", ");
+console.log(authorsReady);
+return authorsReady;
 
 }
 
 //main function
 function getInfo() {
-  getAuthors();
+  let authors=getAuthors();
   let newRecord = {};
 
-  let invertedAuthors = "";
-  let oneNameAuthor=false;
-  //get authors, turn them into array, invert names, join into string
-  let authors = document.getElementById("authorsInput").value;
-  //if any authors
-  if (authors.length !== 0) {
-    //if author only has one name
-    if (!authors.includes(" ")){
-      oneNameAuthor=true;
-      console.log(oneNameAuthor)
-    } else {
-      //more than one author
-    let authorsArr = authors.split("; ");
-    let invertedAuthorsArr = [];
 
-    authorsArr.forEach(element => {
-      let [fn, sn] = element.split(" ");
-      invertedAuthorsArr.push(`${sn}, ${fn}`);
-    });
+//   let invertedAuthors = "";
+//   let oneNameAuthor=false;
+//   //get authors, turn them into array, invert names, join into string
+//   let authors = document.getElementById("authorsInput").value;
+//   //if any authors
+//   if (authors.length !== 0) {
+//     //if author only has one name
+//     if (!authors.includes(" ")){
+//       oneNameAuthor=true;
+//       console.log(oneNameAuthor)
+//     } else {
+//       //more than one author
+//     let authorsArr = authors.split("; ");
+//     let invertedAuthorsArr = [];
 
-    invertedAuthors = invertedAuthorsArr.join(", ");
-  }
-}
+//     authorsArr.forEach(element => {
+//       let [fn, sn] = element.split(" ");
+//       invertedAuthorsArr.push(`${sn}, ${fn}`);
+//     });
+
+//     invertedAuthors = invertedAuthorsArr.join(", ");
+//   }
+// }
 
 
 
@@ -132,17 +150,24 @@ function getInfo() {
 
   //decide for the sort word
   let sortWord = "";
-  if (oneNameAuthor==true){
+  if (authors.length>0){
     sortWord=authors;
-    console.log(sortWord)
   }
   else {
-  if (invertedAuthors.length > 0) {
-    sortWord = invertedAuthors;
-  } else {  
-    sortWord = title;
+    sortWord=title;
   }
-  }
+
+  // if (oneNameAuthor==true){
+  //   sortWord=authors;
+  //   console.log(sortWord)
+  // }
+  // else {
+  // if (invertedAuthors.length > 0) {
+  //   sortWord = invertedAuthors;
+  // } else {  
+  //   sortWord = title;
+  // }
+  // }
 
 //PAGES SHIT
   let pagesRaw = document.getElementById("pagesInput").value;
@@ -174,7 +199,7 @@ function getInfo() {
         title += (`. Състав. ${compilator}`);
       }
 
-      newRecord = { docutype: "book", sw: sortWord, au: invertedAuthors, ttl: title, pl: place, pb: publisher, yp: year, pg: pages, identifier: isbn }
+      newRecord = { docutype: "book", sw: sortWord, au: authors, ttl: title, pl: place, pb: publisher, yp: year, pg: pages, identifier: isbn }
       break;
 
     case "article":
@@ -189,7 +214,7 @@ function getInfo() {
       let issn = document.getElementById("issnInput").value;
 
       newRecord = {
-        docutype: "article", sw: sortWord, au: invertedAuthors, ttl: title,
+        docutype: "article", sw: sortWord, au: authors, ttl: title,
         pt: periodicalTitle, issue: issue, yp: year, pg: pages, identifier: issn, link: onlinePeriodicalLink,
         dv: dateVisited
       };
@@ -203,7 +228,7 @@ function getInfo() {
       let compilationPublisher = document.getElementById("articleCompPublisherInput").value;
       let compISBN = document.getElementById("articleCompIsbnInput").value;
       newRecord = {
-        docutype: "articleComp", sw: sortWord, au: invertedAuthors, ttl: title,
+        docutype: "articleComp", sw: sortWord, au: authors, ttl: title,
         ct: compilationTitle, cc: compilationCompilator, cpl: compilationPlace,
         cpb: compilationPublisher, yp: year, pg: pages, identifier: compISBN
       };
@@ -219,7 +244,7 @@ function getInfo() {
       }
 
       newRecord = {
-        docutype: "online", sw: sortWord, au: invertedAuthors, ttl: title,
+        docutype: "online", sw: sortWord, au: authors, ttl: title,
         st: siteTitle, link: siteAdress, yp: year, dv: dateVisited
       };
       break;
@@ -384,7 +409,17 @@ function hideFields(fieldType) {
 }
 
 function resetInputValues() {
-  let allTheInputFields = document.getElementsByClassName("inputField");
+  let allTheInputFields = document.getElementsByTagName("input");
+  //hide aditional authors
+  let allAuthorFields=Array.from(document.getElementsByClassName("authorInputField"));
+  console.log(allAuthorFields)
+  for (let i=1; i<allAuthorFields.length; i++){
+    let fieldToHide=allAuthorFields[i];
+    authorsDiv.removeChild(fieldToHide);
+    console.log(fieldToHide);
+
+  }
+
 
   for (let i = 0; i < allTheInputFields.length; i++) {
     let currentField = allTheInputFields[i];

@@ -103,9 +103,12 @@ input[type=text]:disabled {
 
 
     #authorsDiv{
-      height:auto; overflow:auto
+      height:auto; 
+      overflow:auto;
+      position: relative;
+      
     }
-    
+ 
    
   
     .buttons{
