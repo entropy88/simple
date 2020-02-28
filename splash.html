@@ -4,17 +4,39 @@
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <link rel="stylesheet" type="text/css" href="splash.css">
  
-  <title>Home</title>
+  <title>Добре дошли</title>
+
 </head>
 
 <body>
+ 
   
     <img id="loading" src="Chaosphere.png" onclick="window.location.href = 'about.html';">
+
+    <div id="overlayWrapper">
+      <div id="inner">
+      <p id="disclaimer">Този сайт не се интересува от личните ви данни.</p>
+      <br>
+      <button id="okButton" onclick="off()">Ok</button>
+      </div>
+    </div>
+
     <div class="footer">
       <p>Entropy 2020</p>
     </div>
     
 
-  <body>
+    <script>
+      function off() {
+        document.getElementById("overlayWrapper").style.display = "none";
+        document.getElementById("inner").style.display = "none";
+      }
+      
+      // function off() {
+      //   document.getElementById("overlay").style.display = "none";
+      // }
+      </script>
+
+    </body>
 
     </html>

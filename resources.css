@@ -64,7 +64,8 @@ body {
        }
    
    .buttonsMenu:hover{
-     background: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid #666;
         }
  
   
@@ -144,7 +145,9 @@ li:hover{
   bottom: 0;
   width: 100%;
 color: whitesmoke;
+background-color: rgba(0,0,0,0.5);
 text-shadow: 1px 1px black;
+ border: 1px solid #666;
   text-align: center;
 }
  

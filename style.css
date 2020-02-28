@@ -66,7 +66,8 @@ input[type=text]:disabled {
       }
   
   .buttonsMenu:hover{
-    background: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid #666;
        }
 
 
@@ -211,6 +212,8 @@ input[type=text]:disabled {
       bottom: 0;
       width: 100%;
     color: whitesmoke;
+    background-color: rgba(0,0,0,0.5);
+    border: 1px solid #666;
     text-shadow: 1px 1px black;
       text-align: center;
     }
