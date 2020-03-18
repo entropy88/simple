@@ -1,73 +1,63 @@
 body {
-    text-align: center;
-    padding: 100px 0 0 0;
-    background-image: url("wallp.jpg");
- }
+  text-align: center;
+  padding: 100px 0 0 0;
+  background-image: url("wallp.jpg");
+}
 
 
 #loading {
-    -webkit-animation: rotation 30s infinite linear;
-    animation: rotation 30s infinite linear;
-    cursor: pointer;
+  -webkit-animation: rotation 30s infinite linear;
+  animation: rotation 30s infinite linear;
+  cursor: pointer;
 }
 
 @keyframes rotation {
-    from {
-            -webkit-transform: rotate(0deg);
-    }
-    to {
-            -webkit-transform: rotate(359deg);
-    }
+  from {
+          -webkit-transform: rotate(0deg);
+  }
+  to {
+          -webkit-transform: rotate(359deg);
+  }
 }
 
 #overlayWrapper {
-  position:absolute;
-  top:0;
-  left:0;
-  width: 100%;
-   z-index:1;
-   height: 100%;
+position:absolute;
+top:0;
+left:0;
+width: 100%;
+ z-index:1;
+ height: 100%;
 
 }
 
 #inner{
-  position: relative; 
-  border: 1px solid #666;
-  background-color: rgba(194, 194, 194, 0.5);
-  border-radius:5px;
-  color: #FFF;
+position: relative; 
+border: 1px solid #666;
+background-color: rgba(194, 194, 194, 0.5);
+border-radius:5px;
+color: #FFF;
 
-  z-index:3;
- 
+z-index:3;
+
 }
 
 #disclaimer{
-  margin: auto;
-  color: whitesmoke;
-  text-shadow: 1px 1px black;
-  font-size: 30pt;
+margin: auto;
+color: whitesmoke;
+text-shadow: 1px 1px black;
+font-size: 30pt;
 }
 
 #okButton{
-  background-color:#699e3c;
-  color: whitesmoke;
-  padding: 10px;
-  width: 8%;
-  text-shadow: 1px 1px black;
-   box-shadow: 1px 1px black;
-   font-weight: bold;
-  cursor: pointer;  
-  border: none;
+background-color:#699e3c;
+color: whitesmoke;
+padding: 10px;
+width: 8%;
+text-shadow: 1px 1px black;
+ box-shadow: 1px 1px black;
+ font-weight: bold;
+cursor: pointer;  
+border: none;
 }
 
-.footer{ 
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-  color: whitesmoke;
-  background-color: rgba(0,0,0,0.5);
-  border: 1px solid #666;
-  text-shadow: 1px 1px black;
-    text-align: center;
-  }
+

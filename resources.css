@@ -64,8 +64,7 @@ body {
        }
    
    .buttonsMenu:hover{
-    background-color: rgba(0,0,0,0.5);
-    border: 1px solid #666;
+     background: rgba(0, 0, 0, 0.4);
         }
  
   
@@ -139,15 +138,14 @@ li:hover{
     position: relative;  
  }  
 
- .footer{ 
-  position: fixed;
+
+ 
+.footer {
+  flex-shrink: 0;
   left: 0;
   bottom: 0;
   width: 100%;
 color: whitesmoke;
-background-color: rgba(0,0,0,0.5);
 text-shadow: 1px 1px black;
- border: 1px solid #666;
   text-align: center;
 }
- 
