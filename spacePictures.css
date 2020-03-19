@@ -1,0 +1,45 @@
+body {
+  background-image: url("wallp.jpg");
+  text-align: justify;
+}
+
+
+#imageContainer {
+  align-self: center;
+  background-color: rgba(194, 194, 194, 0.5);
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2%;
+  border: 1px solid black;
+  border-radius: 25px;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.starImage {
+  display: block;
+  margin: auto;
+}
+
+.descriptionP {
+  padding-top: 2%;
+  margin: auto;
+}
+
+.titleP {
+  text-align: center;
+  font-weight: bold;
+}
+
+
+
+.footer {
+  flex-shrink: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: whitesmoke;
+  text-shadow: 1px 1px black;
+  text-align: center;
+}
