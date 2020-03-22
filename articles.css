@@ -1,6 +1,6 @@
 body {
   background-image: url("wallp.jpg");
-    text-align: justify;  
+  text-align: justify;  
 }
 h3{
   color:whitesmoke;
@@ -67,7 +67,7 @@ h3{
         }
   
         #pageDescription{
-          margin-left: auto;
+        margin-left: auto;
          margin-right: auto;
          text-align:justify;
          width: 25%;
@@ -96,6 +96,8 @@ h3{
   align-self: flex-start; 
   margin-left: auto;
   margin-right: auto;
+  height: 600px;
+  overflow: auto; 
   width: 70%;   
   padding: 2%;
   background-color:#699e3c;

@@ -8,6 +8,7 @@ body {
   align-self: center;
   background-color: rgba(194, 194, 194, 0.5);
   width: fit-content;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
   padding: 2%;
@@ -22,7 +23,17 @@ body {
   margin: auto;
 }
 
+.starVideo{
+  margin-top: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  width: 640px;
+  height: 385px;
+}
+
 .descriptionP {
+  
   padding-top: 2%;
   margin: auto;
 }
@@ -31,7 +42,6 @@ body {
   text-align: center;
   font-weight: bold;
 }
-
 
 
 .footer {
