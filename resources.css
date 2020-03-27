@@ -1,151 +1,139 @@
-
 body {
   background-image: url("wallp.jpg");
-    text-align: justify;
+  
 }
 
-#chaosIcon{
+.parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: auto auto;
+  grid-column-gap: 0px;
+  grid-row-gap: 10px;
+}
+
+
+.dropDownMenuDiv {
+  grid-area: 1 / 1 / 2 / 2;
+  position: relative;
+  display: inline-block;
+}
+
+
+#chaosIcon {
   height: 64px;
   width: 64px;
-  background-color:#699e3c;
+  background-color: #699e3c;
   border-radius: 25px;
 }
 
 
-  .dropbtn {
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.2);
-   border: 1px solid black;
-    cursor: pointer;
-    box-shadow: 2px 2px black;
-   
-  }
-  
-  .dropbtn:hover, .dropbtn:focus {
-    background: rgba(0, 0, 0, 0.4);
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    overflow: auto;
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-    
-  
-  .show {
-      display: flex;
-        flex-direction: column;
+.dropbtn {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid black;
+  cursor: pointer;
+  box-shadow: 2px 2px black;
+
 }
 
-.buttonsMenu{
-  background-color:#699e3c;
-   color: whitesmoke;
-   text-shadow: 1px 1px black;
-   padding: 2%;
-   box-shadow: 1px 1px black;
-   margin:2%;
-   font-weight: bold;
-   cursor: pointer;  
-   border: none;
-       }
-   
-   .buttonsMenu:hover{
-     background: rgba(0, 0, 0, 0.4);
-        }
- 
-  
-      #pageDescription{
-         margin-left: auto;
-        margin-right: auto;
-        text-align:justify;
-        width: 25%;
-        padding: 3%;  
-        background-color:#699e3c;  
-        border-radius: 25px;
-        border: 1px solid black;
-       }
-
-
-   .descLogo{    
-  height: 100px;
- width: 100px;  
- float: left;
- padding: 0 20px 20px 0;
- padding: 2%;
- box-shadow: 1px 1px black;
- border-radius: 25%;
- margin-right: 8px;
- background:whitesmoke;
-   }
-
-img{
-    height: 50px;
-    width: 50px;
-    box-shadow: 1px 1px black;
-    border-radius: 25%;
-    margin-right: 4px;
+.dropbtn:hover,
+.dropbtn:focus {
+  background: rgba(0, 0, 0, 0.4);
 }
 
-
-
-ul{
-    margin-left: 0px;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  overflow: auto;
+  z-index: 1;
 }
 
-li{
-    display: flex;    
-    list-style-type: none;
-   
-}
-
-li:hover{
-    background:  whitesmoke;
-}
-
-.title{
+.dropdown-content a {
   color: black;
-    align-self: center;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-.desc{
-  margin-left: 8px;  
+
+.show {
+  display: flex;
+  flex-direction: column;
 }
 
-#list{
-  align-self: flex-start; 
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;   
-    padding: 2%;
-    background-color:#699e3c;
-    border: 1px solid black;
-     border-radius: 25px;
-    margin-bottom: 50px;
-    position: relative;  
- }  
+.buttonsMenu {
+  background-color: #699e3c;
+  color: whitesmoke;
+  text-shadow: 1px 1px black;
+  padding: 2%;
+  box-shadow: 1px 1px black;
+  margin: 2%;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+}
+
+.buttonsMenu:hover {
+  background: rgba(0, 0, 0, 0.4);
+}
 
 
- 
+.pageDescription {
+  grid-area: 1 / 2 / 2 / 5;
+  padding: 3%;
+  background-color: #699e3c;
+  border-radius: 25px;
+  border: 1px solid black;
+ }
+
+
+img {
+  height: 50px;
+  width: 50px;
+  box-shadow: 1px 1px black;
+  border-radius: 25%;
+  margin-right: 4px;
+}
+
+
+li {
+  display: flex;
+  list-style-type: none;
+
+}
+
+li:hover {
+  background: whitesmoke;
+}
+
+.title {
+  color: black;
+  align-self: center;
+}
+
+.desc {
+  margin-left: 8px;
+}
+
+.contentDiv {
+  grid-area: 3 / 1 / 4 / 6;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 2%;
+  background-color: #699e3c;
+  border: 1px solid black;
+  border-radius: 25px;
+  margin-bottom: 50px;
+}
+
+
 .footer {
   flex-shrink: 0;
   left: 0;
   bottom: 0;
   width: 100%;
-color: whitesmoke;
-text-shadow: 1px 1px black;
+  color: whitesmoke;
+  text-shadow: 1px 1px black;
   text-align: center;
 }

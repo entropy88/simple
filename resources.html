@@ -2,29 +2,34 @@
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161412518-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161412518-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'UA-161412518-1');
-</script>
+        gtag('config', 'UA-161412518-1');
+    </script>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="безплатен достъп до научни ресурси">
-    <meta name="keywords" content="отворена наука, open science, библиограф онлайн, библиография, използвана литература, безплатни ресурси, безплатни книги, безплатни аудио-книги, документални филми, космически изображения">
+    <meta name="keywords"
+        content="отворена наука, open science, библиограф онлайн, библиография, използвана литература, безплатни ресурси, безплатни книги, безплатни аудио-книги, документални филми, космически изображения">
     <meta name="author" content="EntropyStarRover">
+
     <link rel="stylesheet" type="text/css" href="resources.css">
+
+    <link rel="shortcut icon" type="image/png" href="openScienceFavicon.ico"/>
     <title>Интернет на знанието</title>
 </head>
 
 <body>
 
-   
+    <script src="menu.js"></script>
 
-        <script src="menu.js"></script>
-        <div class="dropdown">
+    <div class="parent">
+        <div class="dropDownMenuDiv">
             <img src="Chaosphere.png" id="chaosIcon" onclick="myMenu()" class="dropbtn"></img>
             <div id="myDropdown" class="dropdown-content">
                 <button class="buttonsMenu" onclick="window.location.href = 'bib.html';">Библиограф онлайн</button>
@@ -34,19 +39,21 @@
             </div>
         </div>
 
-   
 
-        <p id="pageDescription"> <img src="pics/oslogo.png" class="descLogo">През тази страница можете да достъпите дигитални ресурси,
-            предоставени от тяхните създатели за <span style="background: whitesmoke;
+
+        <div class="pageDescription">
+              <p>През тази страница можете да достъпите дигитални ресурси,
+                предоставени от тяхните създатели за <span style="background: whitesmoke;
                color:black"> <b>безплатно и законно</b></span> ползване без потребителска регистрация.
-        </p>
+            </p>
+        </div>
 
 
-        <div id="list">
+        <div class="contentDiv">
             <ul>
                 <li><img src="pics/nasa.png">
-                    <a href="spacePictures.html" target="_blank" class="title">Космос за очите</a>
-                               <p class="desc">Различно космическо изображение или видео от архивите на НАСА всеки ден </p>
+                    <a href="spaceLover.html" target="_blank" class="title">Космически календар</a>
+                    <p class="desc">Малка страница за астрономическа информация</p>
                 </li>
 
                 <li><img src="pics/arxiv.jpg">
@@ -76,10 +83,9 @@
                         страници</p>
                 </li>
 
-
                 <li><img src="pics/libriVoxLog.png">
                     <a href="https://librivox.org/" target="_blank" class="title">LibriVox</a>
-                     <p class="desc">Безплатен достъп до над 13 000 аудио книги</p>
+                    <p class="desc">Безплатен достъп до над 13 000 аудио книги</p>
                 </li>
 
                 <li><img src="pics/uw2WE4E2AwA0QG6uaKNCfY7Am0u6zH6pZE8JlDKB.jpeg">
@@ -87,37 +93,37 @@
                     <p class="desc">Безплатен достъп до учебници, аудио книги, онлайн образователни курсове</p>
                 </li>
 
-                <li><img
-                            src="pics/gutenbergLogo.jpg">
-                            <a href="https://www.gutenberg.org/" target="_blank" class="title">Project Gutenberg</a>
-                            <p class="desc">Безплатен достъп до над 60 000 електронни и аудио книги</p>
+                <li><img src="pics/gutenbergLogo.jpg">
+                    <a href="https://www.gutenberg.org/" target="_blank" class="title">Project Gutenberg</a>
+                    <p class="desc">Безплатен достъп до над 60 000 електронни и аудио книги</p>
                 </li>
 
-                <li><img
-                            src="pics/scienceBooks.png">
-                            <a href="http://sciencebooksonline.info/" target="_blank" class="title">Science Books Online</a>
-                                      <p class="desc">Безплатен достъп до научни монографии </p>
+                <li><img src="pics/scienceBooks.png">
+                    <a href="http://sciencebooksonline.info/" target="_blank" class="title">Science Books Online</a>
+                    <p class="desc">Безплатен достъп до научни монографии </p>
                 </li>
 
                 <li><img src="pics/topDocumentary.png">
-                    <a  href="https://topdocumentaryfilms.com//" target="_blank" class="title">Top Documentary Films</a>
+                    <a href="https://topdocumentaryfilms.com//" target="_blank" class="title">Top Documentary Films</a>
                     <p class="desc">Безплатен достъп до над 3000 документални филма</p>
                 </li>
 
                 <li><img src="pics/w3schools.jpg">
                     <a href="https://www.w3schools.com///" target="_blank" class="title">W3Schools</a>
-                               <p class="desc">Платформа за безплатно изучаване на езици за уеб програмиране </p>
+                    <p class="desc">Платформа за безплатно изучаване на езици за уеб програмиране </p>
                 </li>
 
-         
-
-                         </ul>
+            </ul>
         </div>
 
-          <footer class="footer">
-            <script id="_wau3h6">var _wau = _wau || []; _wau.push(["colored", "vxztwv8tgf", "3h6", "5aff0e000000"]);</script><script async src="//waust.at/co.js"></script>
-            <p>Entropy 2020</p>
-          </footer>
+    </div>
+
+    <footer class="footer">
+        <script
+            id="_wau3h6">var _wau = _wau || []; _wau.push(["colored", "vxztwv8tgf", "3h6", "5aff0e000000"]);</script>
+        <script async src="//waust.at/co.js"></script>
+        <p>Entropy 2020</p>
+    </footer>
 
     <body>
 
