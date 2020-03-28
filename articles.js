@@ -53,7 +53,7 @@ function displayArticles() {
         title: "Великолепният – Лоренцо де Медичи",
         text: "Лоренцо де Медичи (1 януари, 1449 г. – 9 април, 1492 г.) е бил италиански държавник и на практика управник на Флорентинската република. Той е бил сред най-влиятелните и деятелни меценати през Ренесанса. Познат още и като Лоренцо Великолепни сред съвременните флорентинци, той е бил магнат, дипломат, политик и меценат на учени, художници и поети. ",
         link: "https://gutenbergpublishinghouse.wordpress.com/2020/02/07/%d0%b2%d0%b5%d0%bb%d0%b8%d0%ba%d0%be%d0%bb%d0%b5%d0%bf%d0%bd%d0%b8%d1%8f%d1%82-%d0%bb%d0%be%d1%80%d0%b5%d0%bd%d1%86%d0%be-%d0%b4%d0%b5-%d0%bc%d0%b5%d0%b4%d0%b8%d1%87%d0%b8/",
-        pictureUrl:"https://gutenbergpublishinghouse.files.wordpress.com/2020/02/medici-crest-1.jpg"
+        pictureUrl: "https://gutenbergpublishinghouse.files.wordpress.com/2020/02/medici-crest-1.jpg"
     }
     let articleSeven = {
         title: "Да разходиш кокошките – мексиканската писателка Елена Понятовска",
@@ -114,8 +114,8 @@ function displayArticles() {
     leftArrImg.className = "arrow"
     leftArr.appendChild(leftArrImg);
     leftArr.addEventListener("click", function () {
-        if (articleIndex<articlesArr.length-1){
-        articleIndex++;
+        if (articleIndex < articlesArr.length - 1) {
+            articleIndex++;
         }
         previousArticle(articleIndex)
     })
@@ -130,8 +130,8 @@ function displayArticles() {
     imageAndtitleDiv.appendChild(titleH);
 
     let img = document.createElement("img");
-    img.src = articlesArr[articlesArr.length-1].pictureUrl;
-    img.className="articlePicture";
+    img.src = articlesArr[articlesArr.length - 1].pictureUrl;
+    img.className = "articlePicture";
     imageAndtitleDiv.appendChild(img)
     cardDiv.appendChild(imageAndtitleDiv);
 
@@ -147,7 +147,7 @@ function displayArticles() {
     link.innerText = "Прочетете повече";
     link.href = articlesArr[articlesArr.length - 1].link;
     link.className = "gutenbergLink";
-    link.target="_blank";
+    link.target = "_blank";
     textAndLinkDiv.appendChild(link);
 
     cardDiv.appendChild(textAndLinkDiv);
@@ -162,10 +162,10 @@ function displayArticles() {
 
     rightArr.appendChild(rightArrImg);
     rightArr.addEventListener("click", function () {
-        if (articleIndex>0){
+        if (articleIndex > 0) {
             articleIndex--;
-            }
-        
+        }
+
         nextArticle(articleIndex)
     })
     cardDiv.appendChild(rightArr);
@@ -175,37 +175,37 @@ function displayArticles() {
 
     //function next article
     function nextArticle(articleIndex) {
-        let currentIndex=articleIndex;
-        if (currentIndex>0){
-        let currentIndex = articleIndex - 1;
+        let currentIndex = articleIndex;
+        if (currentIndex > 0) {
+            let currentIndex = articleIndex - 1;
         }
         console.log(`indeksa na statiqta za vizualizaciq e ${currentIndex}`)
 
         if (currentIndex >= 0) {
             titleH.innerText = articlesArr[currentIndex].title;
-            img.src=articlesArr[currentIndex].pictureUrl;
-            img.className="articlePicture";
+            img.src = articlesArr[currentIndex].pictureUrl;
+            img.className = "articlePicture";
             textP.innerText = articlesArr[currentIndex].text;
             link.href = articlesArr[currentIndex].link;
-         
+
         }
     }
 
     //function previous article
     function previousArticle(articleIndex) {
-        let currentIndex=articleIndex;
-        if (currentIndex<articlesArr.length-2){
-        currentIndex = articleIndex++;
+        let currentIndex = articleIndex;
+        if (currentIndex < articlesArr.length - 2) {
+            currentIndex = articleIndex++;
         }
         console.log(`indeksa na statiqta za vizualizaciq e ${currentIndex}`)
 
         if (currentIndex < articlesArr.length) {
-            img.src=articlesArr[currentIndex].pictureUrl;
-            img.className="articlePicture";
+            img.src = articlesArr[currentIndex].pictureUrl;
+            img.className = "articlePicture";
             titleH.innerText = articlesArr[currentIndex].title;
             textP.innerText = articlesArr[currentIndex].text;
             link.href = articlesArr[currentIndex].link;
-         
+
         }
     }
 
