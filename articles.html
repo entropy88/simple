@@ -2,19 +2,20 @@
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161412518-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161412518-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'UA-161412518-1');
-</script>
+        gtag('config', 'UA-161412518-1');
+    </script>
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Статии и ревюта на книги">
-    <meta name="keywords" content="отворена наука, open science, библиограф онлайн, библиография, използвана литература, безплатни ресурси, безплатни книги, безплатни аудио-книги, документални филми, космически изображения, книгоиздаване">
+    <meta name="keywords"
+        content="отворена наука, open science, библиограф онлайн, библиография, използвана литература, безплатни ресурси, безплатни книги, безплатни аудио-книги, документални филми, космически изображения, книгоиздаване">
     <meta name="author" content="EntropyStarRover">
     <link rel="stylesheet" type="text/css" href="articles.css">
     <title>Статии</title>
@@ -24,30 +25,38 @@
     <script src="articles.js"></script>
     <script src="menu.js"></script>
 
-    <div class="dropdown">
-        <img src="Chaosphere.png" id="chaosIcon" onclick="myMenu()" class="dropbtn"></img>
-        <div id="myDropdown" class="dropdown-content">
-            <button class="buttonsMenu" onclick="window.location.href = 'bib.html';">Библиограф онлайн</button>
-            <button class="buttonsMenu" onclick="window.location.href = 'articles.html';"> Статии</button>
-            <button class="buttonsMenu" onclick="window.location.href = 'resources.html';">Ресурси</button>
-            <button class="buttonsMenu" onclick="window.location.href = 'about.html';">За сайта</button>
+    <div class="parent">
+        <div class="dropDownMenuDiv">
+            <img src="Chaosphere.png" id="chaosIcon" onclick="myMenu()" class="dropbtn"></img>
+            <div id="myDropdown" class="dropdown-content">
+                <button class="buttonsMenu" onclick="window.location.href = 'bib.html';">Библиограф онлайн</button>
+                <button class="buttonsMenu" onclick="window.location.href = 'articles.html';"> Статии</button>
+                <button class="buttonsMenu" onclick="window.location.href = 'resources.html';">Ресурси</button>
+                <button class="buttonsMenu" onclick="window.location.href = 'about.html';">За сайта</button>
+            </div>
         </div>
+
+
+
+        <div class="pageDescription"> <img id="gtbgLogo" src="ik_gutenberg.png" alt="Издателска къща Гутенберг">
+            <p> Страница за ревюта на книги и статии свързани с книгоиздаването и историята на книгата под авторството
+                на
+                Иван
+                Коларов.
+            </p>
+        </div>
+
+        <div class="contentDiv" id="articlesDiv">
+        </div>
+
     </div>
 
-
-
-    <p id="pageDescription"> <img id="gtbgLogo" src="ik_gutenberg.png" alt="Издателска къща Гутенберг">
-        Страница за ревюта на книги и статии свързани с книгоиздаването и историята на книгата под авторството на Иван
-        Коларов.
-    </p>
-
-
-    <div id="articlesDiv">
-    </div>
-
-    <div class="footer">
-        <p>Entropy 2020</p>                                  
-      </div>
+    <footer class="footer">
+        <script
+            id="_wau3h6">var _wau = _wau || []; _wau.push(["colored", "vxztwv8tgf", "3h6", "5aff0e000000"]);</script>
+        <script async src="//waust.at/co.js"></script>
+        <p>Entropy 2020</p>
+    </footer>
 
     <body>
 
