@@ -13,23 +13,33 @@
 
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="космически календар">
+    <meta name="description" content="РєРѕСЃРјРёС‡РµСЃРєРё РєР°Р»РµРЅРґР°СЂ">
     <meta name="keywords"
-        content="фази на луната, метеорен поток, космос, съзвездия,  космически изображения, видео от космоса">
+        content="С„Р°Р·Рё РЅР° Р»СѓРЅР°С‚Р°, РјРµС‚РµРѕСЂРµРЅ РїРѕС‚РѕРє, РєРѕСЃРјРѕСЃ, СЃСЉР·РІРµР·РґРёСЏ,  РєРѕСЃРјРёС‡РµСЃРєРё РёР·РѕР±СЂР°Р¶РµРЅРёСЏ, РІРёРґРµРѕ РѕС‚ РєРѕСЃРјРѕСЃР°">
     <meta name="author" content="EntropyStarRover">
 
-    <link rel="shortcut icon" type="image/png" href="favicon.ico"/>
-    <link rel="stylesheet" type="text/css" href="starLover.css">
+    <link rel="shortcut icon" type="image/png" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="space.css">
     <title>Космически календар</title>
 
 </head>
 
 <body onload="starLover();">
-    <script src="moonFetcher.js"></script>
+    <script src="fetcherScript.js"></script>
 
-    <div class="parent">
+      <div class="menuDiv">
+            <button class="buttonsMenu" onclick="window.location.href = 'bib.html';">Библиограф онлайн</button>
+            <button class="buttonsMenu" onclick="window.location.href = 'articles.html';"> Статии</button>
+            <button class="buttonsMenu" onclick="window.location.href = 'resources.html';">Ресурси</button>
+   <button class="buttonsMenu" onclick="window.location.href = 'spaceLover.html';"> Космически календар</button>
+            <button class="buttonsMenu" onclick="window.location.href = 'about.html';">За сайта</button>
 
-        <div class="columnLeft">
+        </div>
+
+    <div class="row">
+  
+
+        <div class="column">
             <div id="moonContainer">
                 <p id="date">def</p>
                 <p id="phase"></p>
@@ -40,43 +50,36 @@
         </div>
 
 
-        <div class=middleSection>
-            <div id="imageContainer" class="imageContainer"></div>
+        <div class="column">
+
+            <div id="imageContainer" class="imageContainer">
+                <h2>Космическо изображение на деня</h2>
+            </div>
         </div>
 
 
-        <div id="rightCol" class="columnRight">
+        <div id="rightCol" class="column">
 
-            <h1>Предстоящи метеорни потоци</h1>
+            <h1>Предстоящи метеорни потоци</h1>   
 
-            <p>22 Април, Сряда: 09:07<br>
-                Метеорен поток в съзвездието Лира</br> ЗЧЧ = 20</p>
-
-            <p>04 Май, Понеделник: 00:08<br>
-                Метеоритен поток η/ета/ Аквариди в съзвездието Водолей</br> ЗЧЧ = 60</p>
-            <p>28 Юли, Вторник: 00:08<br>
-                Метеоритен поток ι/йота/ Аквариди в съзвездието Водолей</br> ЗЧЧ = 20</p>
-
-            <p>12 Август, Сряда: 16:02<br>
-                Метеоритен поток Персеиди в съзвездието Персей</br> ЗЧЧ = 90</p>
-
+       
             <p>21 Октомври, Сряда: 08:21<br>
-                Метеорен поток Ориониди в съзвездието Орион</br> ЗЧЧ = 20</p>
+        Метеорен поток Ориониди в съзвездието Орион</br> ЗЧЧ = 20</p>
 
-            <p>05 Ноември, Четвъртък: 07:50<br>
-                Метеоритен поток Южни Тауриди в съзвездието Бик</br> ЗЧЧ = 10</p>
+    <p>05 Ноември, Четвъртък: 07:50<br>
+        Метеоритен поток Южни Тауриди в съзвездието Бик</br> ЗЧЧ = 10</p>
 
-            <p>12 Ноември, Четвъртък: 07:06<br>
-                Метеоритен поток Северни Тауриди в съзвездието Бик</br> ЗЧЧ = 15</p>
+    <p>12 Ноември, Четвъртък: 07:06<br>
+        Метеоритен поток Северни Тауриди в съзвездието Бик</br> ЗЧЧ = 15</p>
 
-            <p>17 Ноември, Вторник: 07:06<br>
-                Метеорен поток Леониди в съзвездието Лъв</br> ЗЧЧ = 15</p>
+    <p>17 Ноември, Вторник: 07:06<br>
+        Метеорен поток Леониди в съзвездието Лъв</br> ЗЧЧ = 15</p>
 
-            <p>14 Декември, Понеделник: 02:35<br>
-                Метеорен поток Джеминиди в съзвездието Близнаци</br> ЗЧЧ = 120</p>
+    <p>14 Декември, Понеделник: 02:35<br>
+        Метеорен поток Джеминиди в съзвездието Близнаци</br> ЗЧЧ = 120</p>
 
-            <p>22 Декември, Вторник: 11:00<br>
-                Метеорен поток Урсиди в съзвездието Малка мечка</br> ЗЧЧ = 10</p>
+    <p>22 Декември, Вторник: 11:00<br>
+        Метеорен поток Урсиди в съзвездието Малка мечка</br> ЗЧЧ = 10</p>
 
         </div>
 
@@ -85,13 +88,15 @@
     </div>
 
     <div class="footDiv">
-        <p>Лунните фази използват данни от <a href="http://www.farmsense.net/">farmsense.net</a>. Космическото изображение/видео на деня се
+        <p>Лунните фази използват данни от <a href="http://www.farmsense.net/">farmsense.net</a>. Космическото
+            изображение/видео на деня се
             извлича
-            от <a href="https://apod.nasa.gov/apod/">NASA APOD/</a>. Информацията за метеорните потоци се извлича от<a href=" https://eclipse.gsfc.nasa.gov/SKYCAL/SKYCAL.html">
-            NASA SKYCAL.</p>
+            от <a href="https://apod.nasa.gov/apod/">NASA APOD/</a>. Информацията за метеорните потоци се извлича от<a
+                href=" https://eclipse.gsfc.nasa.gov/SKYCAL/SKYCAL.html">
+                NASA SKYCAL.</p>
 
     </div>
 
 </body>
 
-</html>
+</html>		

@@ -1,0 +1,136 @@
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aliceblue;
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #2d3436 0%, #000000 74%);
+}
+
+h1 {
+    color: #008080;
+    text-shadow: 1px 1px blue;
+}
+
+h2 {
+    color: #008080;
+    text-shadow: 1px 1px blue;
+}
+
+a{
+    color:aliceblue;
+}
+
+
+
+.menuDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+
+.buttonsMenu {
+    background-color: black;
+    color:aliceblue;
+    padding: 1%;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5%;
+    border: 1px solid gray;
+
+}
+
+.buttonsMenu:hover {
+    background-color: rgba(194, 194, 194, 0.075);
+}
+
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  /* Create four equal columns */
+  .column {
+    flex: 25%;
+    padding: 20px;
+  }
+  
+  /* On screens that are 992px wide or less, go from four columns to two columns */
+  @media screen and (max-width: 992px) {
+    .column {
+      flex: 50%;
+    }
+  }
+  
+  /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .row {
+      flex-direction: column;
+    }
+  }
+
+
+#moonPicture {
+    height: 200px;
+    width: 200px;
+}
+
+
+#phase {
+    color: #008080;
+    text-shadow: 1px 1px blue;
+    font-size: larger;
+}
+
+
+
+
+.imageContainer {
+    padding: 2%;
+    background-color: rgba(194, 194, 194, 0.075);
+    border-radius: 25px;
+    border: 1px solid gray;
+
+}
+
+.descriptionP {
+    padding-top: 2%;
+}
+
+.titleP {
+    font-weight: bold;
+}
+
+.starImage {
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    border: 1px solid gray;
+}
+
+.starVideo {
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 640px;
+    height: 385px;
+}
+
+.copyrightP {
+    text-align: right;
+    font-size: smaller;
+}
+
+
+
+
+.footDiv {
+    color: #008080;
+    grid-area: 3 / 1 / 4 / 6;
+    height: 50px;
+    font-size: smaller;
+    text-align: center;
+}		
