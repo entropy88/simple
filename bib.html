@@ -1,191 +1,185 @@
 <!DOCTYPE html>
-
-<head>
+<html><head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-161412518-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script type="text/javascript" async="" src="%D0%91%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D0%B3%D1%80%D0%B0%D1%84%20%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD_files/analytics.js"></script><script async="" src="%D0%91%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D0%B3%D1%80%D0%B0%D1%84%20%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD_files/js"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'UA-161412518-1');
-</script>
+        gtag('config', 'UA-161412518-1');
+    </script>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <meta name="description" content="Биглиограф онлайн">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Библиограф онлайн">
     <meta name="keywords" content="отворена наука, open science, библиограф онлайн, библиография, използвана литература, безплатни ресурси, безплатни книги, безплатни аудио-книги, документални филми, космически изображения">
     <meta name="author" content="EntropyStarRover">
     <title>Библиограф онлайн</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="%D0%91%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D0%B3%D1%80%D0%B0%D1%84%20%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD_files/style.css">
+    <link rel="shortcut icon" type="image/png" href="http://entropysden.free.bg/favicon.ico">
 </head>
 
 <body onload="work()">
 
-    <script src="bibScript.js">
+    <script src="%D0%91%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D0%B3%D1%80%D0%B0%D1%84%20%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD_files/bibScript.js">
     </script>
 
-    <!--create menu-->
+  
 
-    <script src="menu.js"></script>
-
-
-    <div class="dropdown">
-        <img src="Chaosphere.png" id="chaosIcon" onclick="myMenu()" class="dropbtn"></img>
-        <div id="myDropdown" class="dropdown-content">
+    <div class="parent">
+        <div class="menuDiv">
             <button class="buttonsMenu" onclick="window.location.href = 'bib.html';">Библиограф онлайн</button>
             <button class="buttonsMenu" onclick="window.location.href = 'articles.html';"> Статии</button>
             <button class="buttonsMenu" onclick="window.location.href = 'resources.html';">Ресурси</button>
+            <button class="buttonsMenu" onclick="window.location.href = 'spaceLover.html';">Космически календар</button>
             <button class="buttonsMenu" onclick="window.location.href = 'about.html';">За сайта</button>
         </div>
-    </div>
 
-    <div id="main">
-        <div id=buttonsBar>
+        <div id="main" class="contentDiv">
+            <div id="buttonsBar">
 
-            <button class="buttonsMain" id="book" onclick="book()"
-                style="background: rgba(0, 0, 0, 0.4);">Книга</button>
-            <button class="buttonsMain" id="article" onclick="article()">Статия в периодично издание</button>
-            <button class="buttonsMain" id="articleComp" onclick="articleComp()">Статия в сборник</button>
-            <button class="buttonsMain" id="online" onclick="online()">Интернет страница</button>
-        </div>
-        <div id="authorsDiv">
-      
-            <div id="authorD">
-                <p>Автор:          <button id="addAuthorFields">+</button>
-                    <input type="text" id="authorsInput" class="authorInputField">
-                </p>
-
-       
-
+                <button class="buttonsMain" id="book" onclick="book()">Книга</button>
+                <button class="buttonsMain" id="article" onclick="article()" >Статия в периодично издание</button>
+                <button class="buttonsMain" id="articleComp" onclick="articleComp()" >Статия в сборник</button>
+                <button class="buttonsMain" id="online" onclick="online()">Интернет страница</button>
             </div>
-        </div>
-        <hr>
+            <div id="authorsDiv">
+
+                <div id="authorD">
+                    <p>Автор: <button id="addAuthorFields">+</button>
+                        <input type="text" id="authorsInput" class="authorInputField">
+                    </p>
+
+                </div>
+            </div>
+            <hr>
 
 
-        <p>Заглавие:<input type="text" id="titleInput" class="inputField"></p>
-        <p>Подзаглавие:<input type="text" id="subtitleInput" class="inputField"></p>
+            <p>Заглавие:<input type="text" id="titleInput" class="inputField" value="fdsgdf"></p>
+            <p>Подзаглавие:<input type="text" id="subtitleInput" class="inputField" value=" dfgd h"></p>
 
-        <div id="checkCompilationD" class="nonperiodical">
-            <input type="checkbox" id="compilationCheck" onclick="compilation()">Сборник? Състав.:
-            <input type="text" id="compilationInput" class="inputField" disabled>
-        </div>
+            <div id="checkCompilationD" class="nonperiodical" style="display: none;">
+                <input type="checkbox" id="compilationCheck" onclick="compilation()" value="">Сборник? Състав.:
+                <input type="text" id="compilationInput" class="inputField" disabled="disabled">
+            </div>
 
-        <div id="volumeD" class="nonperiodical">
-            <p>Том:<input type="text" id="volumeInput" class="inputField"></p>
-        </div>
+            <div id="volumeD" class="nonperiodical" style="display: none;">
+                <p>Том:<input type="text" id="volumeInput" class="inputField"></p>
+            </div>
 
-        <div id="siteD" class="online">
-            <p>Сайт:
-                <input type="text" id="siteInput" class="inputField">
+            <div id="siteD" class="online" style="display: none;">
+                <p>Сайт:
+                    <input type="text" id="siteInput" class="inputField">
+                </p>
+            </div>
+
+            <div id="linkD" class="online" style="display: none;">
+                <p>Интернет адрес:
+                    <input type="text" id="linkInput" class="inputField">
+                </p>
+            </div>
+
+
+            <div id="periodicalD" class="periodical" style="display: inherit;">
+                <p>Периодично издание:
+                    <input type="text" id="periodicalInput" class="inputField" value="fd g fds">
+                </p>
+            </div>
+
+            <div id="checkPeriodicalD" class="periodical" style="display: inherit;">
+                <input type="checkbox" id="onlinePeriodicalCheck" onclick="onlinePeriodical()" value="">Онлайн? Линк:
+                <input type="text" id="onlinePeriodicalLinkInputField" class="inputField" disabled="disabled">
+            </div>
+
+
+            <!--articleCompFields-->
+            <div id="titleCompD" class="articleComp" style="display: none;">
+                <p>Заглавие на сборника: <input type="text" id="compilationTitleInput" class="inputField"></p>
+            </div>
+
+            <div id="compilatorCompD" class="articleComp" style="display: none;">
+                <p>Съставител: <input type="text" id="articleCompCompilatorInput" class="inputField"></p>
+            </div>
+
+            <div id="placeDComp" class="articleComp" style="display: none;">
+                <p>Местоиздаване: <input type="text" id="articleCompPlaceInput" class="inputField"></p>
+            </div>
+
+            <div id="placeDComp" class="articleComp" style="display: none;">
+                <p>Издателство: <input type="text" id="articleCompPublisherInput" class="inputField"></p>
+            </div>
+            <!--end-->
+
+            <p>Година:<input type="text" id="yearInput" class="inputField"></p>
+
+            <div id="issueD" class="periodical" style="display: inherit;">
+                <p>Брой:
+                    <input type="text" id="issueInput" class="inputField">
+                </p>
+            </div>
+
+            <!--checkBox for video/website page-->
+            <div id="videoD" class="online" style="display: none;">
+                <input type="checkbox" id="videoCheck" onclick="video()" value="">Видео?
+            </div>
+
+
+            <div id="placeD" class="nonperiodical" style="display: none;">
+                <p>Местоиздаване: <input type="text" id="placeInput" class="inputField"></p>
+            </div>
+
+            <div id="placeD" class="nonperiodical" style="display: none;">
+                <p>Издателство: <input type="text" id="publisherInput" class="inputField"></p>
+            </div>
+
+            <div id="allPagesD" class="traditional" style="display: inherit;">
+                <p>Страници:<input type="text" id="pagesInput" class="inputField"></p>
+            </div>
+
+            <p class="periodical" id="articlePagesClar" style="display: inherit;"><i>*Ако статията е на повече от една
+                    страница,
+                    въведете страниците разделени с тире (-).
+                    Пример: "234-236"</i>
             </p>
-        </div>
-
-        <div id="linkD" class="online">
-            <p>Интернет адрес:
-                <input type="text" id="linkInput" class="inputField">
+            <p class="articleComp" id="articlePagesClarComp" style="display: none"><i>*Ако статията е на повече от една
+                    страница, въведете страниците разделени с тире (-).
+                    Пример: "234-236"</i>
             </p>
-        </div>
+
+            <div id="isbnD" class="nonperiodical" style="display: none;">
+                <p>ISBN: <input type="text" id="isbnInput" class="inputField"></p>
+            </div>
 
 
-        <div id="periodicalD" class="periodical">
-            <p>Периодично издание:
-                <input type="text" id="periodicalInput" class="inputField">
-            </p>
-        </div>
+            <div id="isbnDComp" class="articleComp" style="display: none;">
+                <p>ISBN: <input type="text" id="articleCompIsbnInput" class="inputField"></p>
+            </div>
 
-        <div id="checkPeriodicalD" class="periodical">
-            <input type="checkbox" id="onlinePeriodicalCheck" onclick="onlinePeriodical()">Онлайн? Линк:
-            <input type="text" id="onlinePeriodicalLinkInputField" class="inputField" disabled>
-        </div>
+            <div id="issnD" class="periodical" style="display: inherit;">
+                <p>ISSN:<input type="text" id="issnInput" class="inputField"></p>
+            </div>
 
+            <div>
+                <button id="reset" class="buttons" onclick="resetInputValues();">Изчисти полетата</button>
+                <button id="generate" class="buttons" onclick="getInfo();">Добави запис</button>
+            </div>
 
-        <!--articleCompFields-->
-        <div id="titleCompD" class="articleComp">
-            <p>Заглавие на сборника: <input type="text" id="compilationTitleInput" class="inputField"></p>
-        </div>
+            <div id="recordField">Библиография:<p>. :
+         , .  с. </p><p>:  dfgd h. – В: <span></span>,
+             бр. , , c. . </p><p>fdsgdf:  dfgd h. – В: <span>fd g fds</span>,
+             бр. , , c. . </p></div>
 
-        <div id="compilatorCompD" class="articleComp">
-            <p>Съставител: <input type="text" id="articleCompCompilatorInput" class="inputField"></p>
-        </div>
-
-        <div id="placeDComp" class="articleComp">
-            <p>Местоиздаване: <input type="text" id="articleCompPlaceInput" class="inputField"></p>
-        </div>
-
-        <div id="placeDComp" class="articleComp">
-            <p>Издателство: <input type="text" id="articleCompPublisherInput" class="inputField"></p>
-        </div>
-        <!--end-->
-
-
-
-        <p>Година:<input type="text" id="yearInput" class="inputField"></p>
-
-        <div id="issueD" class="periodical">
-            <p>Брой:
-                <input type="text" id="issueInput" class="inputField">
-            </p>
-        </div>
-
-        <!--checkBox for video/website page-->
-        <div id="videoD" class="online">
-            <input type="checkbox" id="videoCheck" onclick="video()">Видео?
-        </div>
-
-
-
-        <div id="placeD" class="nonperiodical">
-            <p>Местоиздаване: <input type="text" id="placeInput" class="inputField"></p>
-        </div>
-
-        <div id="placeD" class="nonperiodical">
-            <p>Издателство: <input type="text" id="publisherInput" class="inputField"></p>
-        </div>
-
-        <div id="allPagesD" class="traditional">
-            <p>Страници:<input type="text" id="pagesInput" class="inputField"></p>
-        </div>
-
-        <p class="periodical" id="articlePagesClar" style="display: none"><i>*Ако статията е на повече от една страница,
-                въведете страниците разделени с тире (-).
-                Пример: "234-236"</i>
-        </p>
-        <p class="articleComp" id="articlePagesClarComp" style="display: none"><i>*Ако статията е на повече от една
-                страница, въведете страниците разделени с тире (-).
-                Пример: "234-236"</i>
-        </p>
-
-        <div id="isbnD" class="nonperiodical">
-            <p>ISBN: <input type="text" id="isbnInput" class="inputField"></p>
-        </div>
-
-
-        <div id="isbnDComp" class="articleComp">
-            <p>ISBN: <input type="text" id="articleCompIsbnInput" class="inputField"></p>
-        </div>
-
-        <div id="issnD" class="periodical">
-            <p>ISSN:<input type="text" id="issnInput" class="inputField"></p>
-        </div>
-
-        <div id="buttonsDiv">
-            <button id="reset" class="buttons" onclick="resetInputValues();">Изчисти полетата</button>
-            <button id="generate" class="buttons" onclick="getInfo();">Добави запис</button>
-        </div>
-
-        
-        <div id="recordField">
-            <p>Библиография: </p>
         </div>
 
     </div>
 
     <div class="footer">
-        <script id="_wau3h6">var _wau = _wau || []; _wau.push(["colored", "vxztwv8tgf", "3h6", "5aff0e000000"]);</script><script async src="//waust.at/co.js"></script>
+        <script id="_wau3h6">var _wau = _wau || []; _wau.push(["colored", "vxztwv8tgf", "3h6", "5aff0e000000"]);</script><div style="position: relative; display: inline-block; background-image: url(&quot;http://widgets.amung.us/colwid/?c=5aff0e000000&quot;); width: 81px; height: 29px; padding: 0px; overflow: hidden; cursor: pointer; direction: ltr;" title="Click to see what's popular on this site!"><div style="position: absolute; top: 7px; padding: 0px; margin: 0px; overflow: visible; left: 43px;"><div style="background-image: url(&quot;http://widgets.amung.us/colwid/?c=5aff0e000000&quot;); background-repeat: no-repeat; background-attachment: scroll; background-position: -11px -29px; position: absolute; width: 6px; height: 14px; left: 0px; line-height: 14px; overflow: hidden; padding: 0px; margin: 0px;"></div></div></div>
+        <script async="" src="%D0%91%D0%B8%D0%B1%D0%BB%D0%B8%D0%BE%D0%B3%D1%80%D0%B0%D1%84%20%D0%BE%D0%BD%D0%BB%D0%B0%D0%B9%D0%BD_files/co.js"></script>
         <p>Entropy 2020</p>
-      </div>
-      
+    </div>
 
-</body>
 
-</html>
+</body></html>

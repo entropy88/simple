@@ -1,219 +1,168 @@
 body {
-  background-image: url("wallp.jpg");
-    text-align: justify;  
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  color: aliceblue;
+  background-color: #2d3436;
+  background-image: linear-gradient(315deg, #044343 0%, #000000 74%);
+
 }
-#chaosIcon{
-  height: 64px;
-  width: 64px;
-  background-color:#699e3c;
-  border-radius: 25px;
+
+.menuDiv {
+  grid-area: 1 / 1 / 2 / 8;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
 
 input[type=text]:disabled {
-    background: #62655D;
-  }
-
-  .dropbtn {
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.2);
-   border: 1px solid black;
-    cursor: pointer;
-    box-shadow: 2px 2px black;
-   
-  }
-  
-  .dropbtn:hover, .dropbtn:focus {
-    background: rgba(0, 0, 0, 0.4);
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    min-width: 160px;
-    overflow: auto;
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  }
-    
-  
-  .show {
-      display: flex;
-        flex-direction: column;
+  background: #62655D;
 }
 
-.buttonsMenu{
- background-color:#699e3c;
-  color: whitesmoke;
-  text-shadow: 1px 1px black;
-  padding: 2%;
-  box-shadow: 1px 1px black;
-  margin:2%;
+.buttonsMenu {
+  background-color: black;
+  color: aliceblue;
+  padding: 1%;
   font-weight: bold;
-  cursor: pointer;  
-  border: none;
-      }
-  
-  .buttonsMenu:hover{
-    background: rgba(0, 0, 0, 0.4);
-       }
+  cursor: pointer;
+  border-radius: 5%;
+  border: 1px solid gray;
+}
 
+.buttonsMenu:hover {
+  background-color: rgba(194, 194, 194, 0.075);
+}
 
-#handle{   
-    margin:auto;
-    width: 50%;
-     box-shadow: 5px 5px black;
-    border-radius: 25px;
-    color: whitesmoke;
-    display: flex;
-    align-content: space-between;
-  }
 
 #main {
-  background-color:#699e3c;
-    margin-left: auto;
-    margin-right: auto;
-    height: 800px;
-    overflow: auto;
-    width: 50%;
-    padding: 2%;
-      
-    border: 1px solid black;
-    border-radius: 25px;
-    border: 1px solid black;
-   margin-bottom: 50px;
-    position: relative;   
-     }   
+  background-color: rgba(194, 194, 194, 0.075);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 800px;
+  overflow: auto;
+  width: 50%;
+  padding: 2%;
+  border: 1px solid black;
+  border-radius: 25px;
+  border: 1px solid black;
+  margin-bottom: 50px;
+  position: relative;
+}
 
-    #buttonsBar{
-        display: flex;
-        align-content: space-between;
-    }
+#buttonsBar {
+  display: flex;
+  align-content: space-between;
+}
 
 
-    #authorsDiv{
-      height:auto; 
-      overflow:auto;
-      position: relative;
-      
-    }
- 
-   
-  
-    .buttons{
-        float: right;
-        background-color: whitesmoke;
-         font-weight: bold;        
-         border: 1px solid black;    
-        padding: 2%;
-        margin-left: 16px;      
-                      
-    }
+#authorsDiv {
+  height: auto;
+  overflow: auto;
+  position: relative;
 
-    .buttons:hover{
-        background-color: 	rgba(0, 0, 0, 0.4);
-    }
+}
 
-    .buttonsMain{  
-      background-color:whitesmoke;
-      border: 1px solid black; 
-        height: 50px;           
-        font-weight: bold;  
-        margin: 2px;        
-        flex-basis: 100%;
-    }
 
-    .buttonsMain:hover{
-        background-color: 	rgba(0, 0, 0, 0.4);
-    }
+.buttons {
+  float: right;
+  background-color: black;
+  color: aliceblue;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  border: 1px solid black;
+  padding: 2%;
+  margin-left: 16px;
+}
 
-          
-      
-    #recordField {
-    background-color: whitesmoke;    
-    color:black;
-    padding: 20px; 
-    border-radius: 25px;
-    margin: 0 auto;
-    border:1px solid black;
-    height: 200px;
-    width: 92%;
-     overflow: auto;    
-    float:bottom;
+.buttons:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
 
-    }
-    
-    .clarification {
-        font-style: italic;
-        }
+.buttonsMain {
+  background-color: black;
+  color: aliceblue;
+  border: 1px solid black;
+  height: 50px;
+  font-weight: bold;
+  margin: 2px;
+  flex-basis: 100%;
+}
 
-    #counter{
-        border-style: solid;
-        border: 3px solid black;
-    }
-        
-    #pagesArticleD{
-        display: none;
-        width:100%;   
-    }
-      
-    .inputField{
-    border-radius: 25px;    
-    width:70%;
-    float: right;   
-    }
+.buttonsMain:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+}
 
-    .authorInputField{
-      border-radius: 25px;    
-      width:70%;
-      float: right;   
-      }
 
- 
-    .label{ 
-        padding-left: 10px;
-        border-radius: 25px;
-    }
-    
-    .periodical {
-    display: none;
-    }
 
-    .articleComp{
-        display: none;
-    }
-    
-    .online {
-        display: none;
-    }
-    
-   
-    .handles {
-        box-shadow: 5px 5px black;
-        border-radius: 25px;
-    }
+#recordField {
+  background-color: whitesmoke;
+  color: black;
+  padding: 20px;
+  border-radius: 25px;
+  margin: 0 auto;
+  border: 1px solid black;
+  height: 200px;
+  width: 92%;
+  overflow: auto;
+  float: bottom;
+}
 
-    .footer {
-      flex-shrink: 0;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-    color: whitesmoke;
-    text-shadow: 1px 1px black;
-      text-align: center;
-    }
+.clarification {
+  font-style: italic;
+}
 
-    span{
-      font-style: italic;
-  }
+#counter {
+  border-style: solid;
+  border: 3px solid black;
+}
+
+#pagesArticleD {
+  display: none;
+  width: 100%;
+}
+
+.inputField {
+  border-radius: 25px;
+  width: 70%;
+  float: right;
+}
+
+.authorInputField {
+  border-radius: 25px;
+  width: 70%;
+  float: right;
+}
+
+
+.label {
+  padding-left: 10px;
+  border-radius: 25px;
+}
+
+.periodical {
+  display: none;
+}
+
+.articleComp {
+  display: none;
+}
+
+.online {
+  display: none;
+}
+
+.footer {
+  flex-shrink: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: whitesmoke;
+  text-shadow: 1px 1px black;
+  text-align: center;
+}
+
+span {
+  font-style: italic;
+}

@@ -404,10 +404,9 @@ function changeButtonApearance(buttonId) {
   for (let i = 0; i < mainButtons.length; i++) {
     let currentButton = mainButtons[i];
     if (currentButton["id"] !== buttonId) {
-      currentButton.style.background ="whitesmoke";
+      currentButton.style.background ="black";
     } else {
-      currentButton.style.background = "#699e3c";
-      currentButton.style.background="rgba(0, 0, 0, 0.4)";
+         currentButton.style.background="rgba(0, 0, 0, 0.4)";
     }
   }
 }
