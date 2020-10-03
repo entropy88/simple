@@ -49,16 +49,18 @@ let dateVisited = (`${dd}/${mm}/${yyyy}`);
 
 //create new empty array on page load
 function work() {
-
-  
+  //clean the recordField
+  let recordField=document.getElementById("recordField");
+  recordField.innerHTML=("Библиография:");
   let addAuthorFieldsButton=document.getElementById("addAuthorFields");
   addAuthorFieldsButton.addEventListener("click", function(){
     addAuthorFieldOnClick();
   })
   return bibliography = [];
+ 
   
 }
-//background img: https://www.wallpaperflare.com/artwork-green-pattern-beehive-patterns-wallpaper-268237
+
 
 
 //adding input fields for multiple authors
