@@ -289,7 +289,7 @@ function getInfo() {
         break;
 
       case "article":
-        record += (`. – В: ${element["pt"]},
+        record += (`. – В: **${element["pt"]}**,
              бр. ${element["issue"]}, ${element["yp"]}, c. ${element["pg"]}. `);
         if (element["link"].length > 0) {
           record += (`[Прегледан ${element["dv"]}] Достъпно от: ${element["link"]}. `)
@@ -310,17 +310,47 @@ function getInfo() {
         break;
 
       case "online":
-        record += (`. – В: ${element["st"]} [online].
+        record += (`. – В: **${element["st"]}** [online].
              ${element["yp"]}. [Прегледан ${element["dv"]}]. Достъпно от: ${element["link"]}`);
         break;
     }
 
     console.log(element)
 
+    //fill the bibliography!!!
+
     let recordParagraph = document.createElement("p");
+  
+    console.log(typeof(record));
+    
+    //CHECK IF RECORD HAS TO BE BROKEN BECAUSE OT ITALICS!
+    let recordHasToBeBroken=record.includes("**");
+    console.log(recordHasToBeBroken);
+    if (recordHasToBeBroken){
+      let firstPart=record.substring(0, record.indexOf("**"));
+      let secondPart=record.substring(record.lastIndexOf("**")+2);
+      let italicized=record.substring(record.indexOf("**")+2, record.lastIndexOf("**"))
+      console.log("predi periodichnoto"+firstPart);
+      console.log("sled periodichnoto" +secondPart);
+      console.log(italicized);
+      let italicizedSpan=document.createElement("SPAN");
+      italicizedSpan.textContent=italicized;
+
+      let fp = document.createTextNode(firstPart);
+      recordParagraph.appendChild(fp);
+      recordParagraph.appendChild(italicizedSpan);
+      let sp = document.createTextNode(secondPart);
+      recordParagraph.appendChild(sp);
+    
+     
+      bibField.appendChild(recordParagraph);
+  
+    } else {
+
     let rec = document.createTextNode(record);
     recordParagraph.appendChild(rec);
     bibField.appendChild(recordParagraph);
+    }
 
   });
 
