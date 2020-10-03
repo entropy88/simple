@@ -50,6 +50,7 @@ let dateVisited = (`${dd}/${mm}/${yyyy}`);
 //create new empty array on page load
 function work() {
   //clean the recordField
+  resetInputValues();
   let recordField=document.getElementById("recordField");
   recordField.innerHTML=("Библиография:");
   let addAuthorFieldsButton=document.getElementById("addAuthorFields");
@@ -336,6 +337,7 @@ function getInfo() {
       console.log("sled periodichnoto" +secondPart);
       console.log(italicized);
       let italicizedSpan=document.createElement("SPAN");
+      italicizedSpan.style.fontStyle="italic";
       italicizedSpan.textContent=italicized;
 
       let fp = document.createTextNode(firstPart);
@@ -509,4 +511,39 @@ function compilation() {
   }
 }
 
+function Export2Doc(element, filename = ''){
+  let preHtml = "<html xmlns:o='urn:schemas-microsoft-com:office:office' xmlns:w='urn:schemas-microsoft-com:office:word' xmlns='http://www.w3.org/TR/REC-html40'><head><meta charset='utf-8'><title>Export HTML To Doc</title></head><body>";
+  let postHtml = "</body></html>";
+  let html = preHtml+document.getElementById(element).innerHTML+postHtml;
+
+  let blob = new Blob(['\ufeff', html], {
+      type: 'application/msword'
+  });
+  
+  // Specify link url
+  let url = 'data:application/vnd.ms-word;charset=utf-8,' + encodeURIComponent(html);
+  
+  // Specify file name
+  filename = filename?filename+'.doc':'document.doc';
+  
+  // Create download link element
+  let downloadLink = document.createElement("a");
+
+  document.body.appendChild(downloadLink);
+  
+  if(navigator.msSaveOrOpenBlob ){
+      navigator.msSaveOrOpenBlob(blob, filename);
+  }else{
+      // Create a link to the file
+      downloadLink.href = url;
+      
+      // Setting the file name
+      downloadLink.download = filename;
+      
+      //triggering the function
+      downloadLink.click();
+  }
+  
+  document.body.removeChild(downloadLink);
+}
 
