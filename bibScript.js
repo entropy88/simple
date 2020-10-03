@@ -302,7 +302,7 @@ function getInfo() {
         break;
 
       case "articleComp":
-        record += (`. – В: ${element["ct"]}. Състав. ${element["cc"]}. ${element["cpl"]}: 
+        record += (`. – В: **${element["ct"]}**. Състав. ${element["cc"]}. ${element["cpl"]}: 
        ${element["cpb"]}, ${element["yp"]}. с. ${element["pg"]}. `);
         if (element["identifier"].length > 0) {
           record += (`ISBN ${element["identifier"]}`);
