@@ -1,117 +1,148 @@
-body {
-  background-image: url("wallp.jpg");
-}
+/* Yes, we wrapped our nav in a header tag.
+This allows us to add a background to the nav bar without 
+cutting off on our max-width property.
+To see what I mean, try moving this background to the nav element
+*/
+header {
+    background: #044343;
+    border: 1px solid gray;  
+  }
+  
+  nav {      
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin: auto;
+  }
+  
+  .logo {
+    margin-right: auto;
+  }
 
-.parent {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: auto auto;
-  grid-column-gap: 0px;
-  grid-row-gap: 10px;
-}
+  .dropdown-link-container {       
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
 
-.dropDownMenuDiv {
-  grid-area: 1 / 1 / 2 / 2;
-  position: relative;
-  display: inline-block;
-}
+  .dropdown-link-container > a {
+    margin-left: 20px;
+  }
+  
+  .mobile-dropdown-toggle {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .logo,
+    .mobile-dropdown-toggle {
+      z-index: 1;
+    }
+  
+    .mobile-dropdown-toggle {
+      display: initial;
+    }
+  
+    .dropdown-link-container {
+      /* first, make our dropdown cover the screen */
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100vh;
+      /* fix nav height on mobile safari, where 100vh is a little off */
+      height: -webkit-fill-available;
+  
+      /* then, arrange our links top to bottom */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+  
+      /* add margins and padding to taste */
+      margin: 0;
+      padding-left: 7vw;
+      padding-right: 7vw;
+      background: #044343;
+      z-index: 0;
+  
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: transform 0.2s, opacity 0.2s;
+    }
+  
+    nav.dropdown-opened > .dropdown-link-container {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* this stuff isn't super important */
+  html {
+    font-family: sans-serif;
+  }
+  
+  body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aliceblue;
+    background-color: #2d3436;
+    background-image: linear-gradient(315deg, #044343 0%, #000000 74%);
+  }
+  
+  .navLinks {
+    /* white-space: nowrap; */
+    background-color: black;
+    color: aliceblue;
+    padding: 1%;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5%;
+    border: 1px solid gray;  
+  }
+  
+  .navLinks:hover {
+    background-image: linear-gradient(315deg, #044343 0%, #000000 74%);
+  }
 
-h3 {
-  color: whitesmoke;
-  text-shadow: 1px 1px black;
-}
+  
+  h3{
+      color: #045757;
+      text-shadow: 1px 1px #044343;
+  }
 
-#chaosIcon {
-  height: 64px;
-  width: 64px;
-  background-color: #699e3c;
-  border-radius: 25px;
-}
+  .pageDescription {
+    margin: 10px;
+    padding: 2%;
+    background-color: rgba(194, 194, 194, 0.075);
+    border-radius: 25px;
+    border: 1px solid gray;  
+  }
 
-.dropbtn {
-  padding: 10px;
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid black;
-  cursor: pointer;
-  box-shadow: 2px 2px black;
-}
-
-.dropbtn:hover,
-.dropbtn:focus {
-  background: rgba(0, 0, 0, 0.4);
-}
-
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  min-width: 160px;
-  overflow: auto;
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-
-.show {
-  display: flex;
-  flex-direction: column;
-}
-
-.buttonsMenu {
-  background-color: #699e3c;
-  text-shadow: 1px 1px black;
-  color: whitesmoke;
-  border: none;
-  padding: 2%;
-  box-shadow: 1px 1px black;
-  margin: 2%;
-  font-weight: bold;
-  cursor: pointer;
-}
-
-.buttonsMenu:hover {
-  background: rgba(0, 0, 0, 0.4);
-}
-
-
-.pageDescription {
-  grid-area: 1 / 2 / 2 / 5;
-  padding: 3%;
-  background-color: #699e3c;
-  border-radius: 25px;
-  border: 1px solid black;
- }
-
-ul {
-  list-style-type: square;
-}
-
-.qa {
-  grid-area: 3 / 2 / 2 / 5;
-  padding: 3%;
-  background-color: #699e3c;
-  border: 1px solid black;
-  border-radius: 25px;
-  margin-bottom: 50px;
-}
-
-a {
-  color: whitesmoke;
-  text-shadow: 1px 1px black;
-}
-
-.footer {
-  flex-shrink: 0;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: whitesmoke;
-  text-shadow: 1px 1px black;
-  text-align: center;
-}
+  .qa {
+    margin: 10px;
+    padding: 2%;
+    background-color: rgba(194, 194, 194, 0.075);
+    border-radius: 25px;
+    border: 1px solid gray;
+  }
+  
+  ul {
+    list-style-type: square;
+  }
+   
+  
+  a {
+    color: whitesmoke;
+    text-shadow: 1px 1px black;
+  }
+  
+  .footer {
+    flex-shrink: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: whitesmoke;
+    text-shadow: 1px 1px black;
+    text-align: center;
+  }		
