@@ -158,6 +158,12 @@ h3{
     display: block;
   
   }
+
+ @media (max-width: 600px) {
+    #gtbgBaner {
+      width: 100%; 
+    }
+  }
   
   .articlesList { 
     grid-area: 1 / 4 / 2 / 5; 
