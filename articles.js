@@ -1,19 +1,18 @@
 function displayArticles() {
 
 
-
     let articlesArr = [];
 
     let articleZero = {
         title: "Изобретяване и история на печатната машина",
-        text: "Ако зададем въпросa за развитието на печатната технология, мнозина биха отговорили, че началото е поставено от Гутенберг с изобретяването на печатната машина и биха сгрешили. Печатната машина на Гутенберг несъмнено е едно от най-фундаменталните открития в човешката история, предизвикало ефекта на доминото за разбиването на цензурата в стария свят и утвърдила бързото разпространение на идеи, но има много по-ранно датиращи предпоставки, без които нито машината, нито печатната индустрията биха съществували днес.",
+        text: "Ако зададем въпросa за развитието на печатната технология, мнозина биха отговорили, че началото е поставено от Гутенберг с изобретяването на печатната машина и биха сгрешили. Печатната машина на Гутенберг несъмнено е едно от най-фундаменталните открития в човешката история, предизвикало ефекта на доминото за разбиването на цензурата в стария свят и утвърдила бързото разпространение на идеи, но има много по-ранно датиращи предпоставки, без които нито машината, нито печатната индустрията биха съществували днес.Печатният процес е известен на човечеството от хилядолетия и макар крайният продукт на първите техники за печат по нищо да не прилича на днешната книга, то без тях и усъвършенстването им днешната печатна индустрия не би била същата. Спуснете се по спиралата на времето с нашите кратки статии свързани с печатната машина, за да си отговорим на следните въпроси:",
         link: "https://gutenbergpublishinghouse.wordpress.com/2019/09/10/%d0%b8%d0%b7%d0%be%d0%b1%d1%80%d0%b5%d1%82%d1%8f%d0%b2%d0%b0%d0%bd%d0%b5-%d0%b8-%d0%b8%d1%81%d1%82%d0%be%d1%80%d0%b8%d1%8f-%d0%bd%d0%b0-%d0%bf%d0%b5%d1%87%d0%b0%d1%82%d0%bd%d0%b0%d1%82%d0%b0-%d0%bc/",
         pictureUrl: "https://gutenbergpublishinghouse.files.wordpress.com/2019/09/printing-press-1.jpg?w=1400"
     }
 
     let articleOne = {
         title: "Роберто Арлт и „Гневната играчка“",
-        text: "Романът „Гневната играчка“ от 1926 година ни отвежда по уличките на Буенос Айрес в компанията на един юноша-крадец, който се възхищава на Ницше и Достоевски. Силвио си мечтае за славата на откритията, но вместо това драска графити заедно с дребни мошеници и не успява да уталожи спомена за набързо отхвърлилата го приятелка, а на фона на всичко това, майка му му натяква да си намери работа. ",
+        text: "Романът „Гневната играчка“ от 1926 година ни отвежда по уличките на Буенос Айрес в компанията на един юноша-крадец, който се възхищава на Ницше и Достоевски. Силвио си мечтае за славата на откритията, но вместо това драска графити заедно с дребни мошеници и не успява да уталожи спомена за набързо отхвърлилата го приятелка, а на фона на всичко това, майка му му натяква да си намери работа. Този енергичен разказ не се задържа дълго на едно място и всяко драматично събитие бързо бива забравено, щом започне следващата глава.",
         link: "https://gutenbergpublishinghouse.wordpress.com/2019/08/07/%d1%80%d0%be%d0%b1%d0%b5%d1%80%d1%82%d0%be-%d0%b0%d1%80%d0%bb%d1%82-%d0%b8-%d0%b3%d0%bd%d0%b5%d0%b2%d0%bd%d0%b0%d1%82%d0%b0-%d0%b8%d0%b3%d1%80%d0%b0%d1%87%d0%ba%d0%b0/",
         pictureUrl: "https://gutenbergpublishinghouse.files.wordpress.com/2019/08/arlt-art-fin.jpg"
 
@@ -21,7 +20,7 @@ function displayArticles() {
 
     let articleTwo = {
         title: "36 години в заточение – писателката Роса Часел",
-        text: "Роса Часел (1898 – 1994) днес се счита за една от най-значимите испански писателки от XX в., макар и дълги години да е била напълно непозната в собствената си страна. Обаче през последните години на своя бурен живот, който понякога прилича повече на безкраен низ от приключения, тя неизменно била поставяна в редиците на най-оригиналните и самобитни мислители и активно присъствала в новините.",
+        text: "Роса Часел (1898 – 1994) днес се счита за една от най-значимите испански писателки от XX в., макар и дълги години да е била напълно непозната в собствената си страна. Обаче през последните години на своя бурен живот, който понякога прилича повече на безкраен низ от приключения, тя неизменно била поставяна в редиците на най-оригиналните и самобитни мислители и активно присъствала в новините.Младостта на Роса Часел е свързана с испанския авангард в литературата, изящните и приложните изкуства. Само че литературната слава я застига чак през 60-те години на века, въпреки че вече има публикувани множество значими разкази, романи, стихове и есета. Тя споделя нелеката съдба на множество испански интелектуалци, които след гражданската война в страната са принудени да емигрират.",
         link: "https://gutenbergpublishinghouse.wordpress.com/2020/02/14/36-%d0%b3%d0%be%d0%b4%d0%b8%d0%bd%d0%b8-%d0%b2-%d0%b7%d0%b0%d1%82%d0%be%d1%87%d0%b5%d0%bd%d0%b8%d0%b5-%d0%bf%d0%b8%d1%81%d0%b0%d1%82%d0%b5%d0%bb%d0%ba%d0%b0%d1%82%d0%b0-%d1%80%d0%be%d1%81%d0%b0/",
         pictureUrl: "https://gutenbergpublishinghouse.files.wordpress.com/2020/02/chacel_cover.jpg?w=1400"
 
@@ -29,7 +28,7 @@ function displayArticles() {
 
     let articleThree = {
         title: "проф. Александър Фол. Седем приказки за миналото на света",
-        text: "В “Седем приказки за миналото на света” Александър Фол е вплел под формата на образователни приказки историята на света от древните времена до наши дни. Той разпалва детското въображение и интерес с помощта на митове и легенди и помага на децата да научат повече за древните цивилизации и техните постижения, върху които се гради и нашето съвремие, под формата на приказка.",
+        text: "В “Седем приказки за миналото на света” Александър Фол е вплел под формата на образователни приказки историята на света от древните времена до наши дни. Той разпалва детското въображение и интерес с помощта на митове и легенди и помага на децата да научат повече за древните цивилизации и техните постижения, върху които се гради и нашето съвремие, под формата на приказка.Чрез тази книга децата ще опознаят основни митологични, исторически и политически образи от европейската, азиатската и египетската култури, както и по-важните събития, нововъведения и постижения в човешката история. Тази книга ще помогне на децата да разберат ценности и идеали, като Право, Равенство, Справедливост, Свобода, като им представи на най-основно и незатормозяващо с години и излишни факти ниво историческите периоди и събития, като Античността, църковното влияние през Средновековието, разширяването на представите на света по време на Великите географски откритие, Просвещението и неговата Научна революция, както тъмната сянка на робството и борбите са свобода. А докато споделяте тази книга с малките читатели, ще можете да се насладите на живописните илюстрации на художника Любен Диманов.",
         link: "https://gutenbergpublishinghouse.wordpress.com/2018/11/30/%d1%81%d0%b5%d0%b4%d0%b5%d0%bc-%d0%bf%d1%80%d0%b8%d0%ba%d0%b0%d0%b7%d0%ba%d0%b8-%d0%b7%d0%b0-%d0%bc%d0%b8%d0%bd%d0%b0%d0%bb%d0%be%d1%82%d0%be-%d0%bd%d0%b0-%d1%81%d0%b2%d0%b5%d1%82%d0%b0-%d0%be/",
         pictureUrl: "https://gutenbergpublishinghouse.files.wordpress.com/2018/11/sedem-prikazki-za-sveta-korica-loga-eu-1.jpg"
     }
@@ -81,6 +80,30 @@ function displayArticles() {
         link: "https://gutenbergpublishinghouse.wordpress.com/2020/03/26/%d0%bf%d0%b0%d1%80%d0%b0%d1%86%d0%b5%d0%bb%d0%b7-%d0%b2%d0%b5%d1%81%d1%82%d0%b8%d1%82%d0%b5%d0%bb-%d0%bd%d0%b0-%d1%81%d1%8a%d0%b2%d1%80%d0%b5%d0%bc%d0%b5%d0%bd%d0%bd%d0%b0%d1%82%d0%b0-%d0%bc%d0%b5/",
         pictureUrl: "https://gutenbergpublishinghouse.files.wordpress.com/2020/03/paracelsus-surgery-no-label.jpg"
     }
+    let article11 = {
+        title: "5 начина да се сдобиете с търсената от вас книга, когато я няма по книжарниците",
+        text: "В ролята си на читатели всички ние сме се изправяли пред патовата ситуация книгата, която искаме да закупим, да е с изчерпан тираж. При такива случаи често започва едно голямо търсене по сайтове и каталози на големи и малки книжарници, а резултатът, особено при по-стари издания, обикновено не е много обнадеждаващ. След това за нас, читателите, остава единствено да се надяваме и да чакаме издателите да измерят достатъчно голям читателски интерес и евентуално да решат да преиздадат желаното от нас заглавие. Това може да отнеме години или пък да не се случи никога – поради финансови затруднения на издателя, несъгласия около условията за следващ тираж с автора или просто твърде малък брой запитвания за изчерпаното заглавие. В тази статия ще ви ориентираме към 5 стъпки за възможно решение на казуса „изчерпан тираж“.",
+        link: "https://gutenbergpublishinghouse.wordpress.com/2020/04/12/5-%d0%bd%d0%b0%d1%87%d0%b8%d0%bd%d0%b0-%d0%b4%d0%b0-%d1%81%d0%b5-%d1%81%d0%b4%d0%be%d0%b1%d0%b8%d0%b5%d1%82%d0%b5-%d1%81-%d1%82%d1%8a%d1%80%d1%81%d0%b5%d0%bd%d0%b0%d1%82%d0%b0-%d0%be%d1%82-%d0%b2/#step-five",
+        pictureUrl: "https://gutenbergpublishinghouse.files.wordpress.com/2020/04/featured-image.jpg"
+    }
+    let article12 = {
+        title: "10 факта за Александрийската библиотека",
+        text: "След ненавременна смърт на Александър през 323 г. пр. Хр., неговите завоевания водят до утвърждаването на нова ера в античния свят, наречена елинизъм. Елинизмът се появява като резултат от обединяване на гръкомакедонската култура и тази на обществата в северна Африка, средния изток, централна Азия и Индия. Характерни за него са ярките изяви в изящните изкуства, разширяване на философските хоризонти и постоянното търсене на нови знания. Няма друга институция, която да олицетворява по-добре духът на елинизма от Александрийската библиотека в Египет.",
+        link: "https://gutenbergpublishinghouse.wordpress.com/2020/07/24/10-%d1%84%d0%b0%d0%ba%d1%82%d0%b0-%d0%b7%d0%b0-%d0%b4%d1%80%d0%b5%d0%b2%d0%bd%d0%b0%d1%82%d0%b0-%d0%b0%d0%bb%d0%b5%d0%ba%d1%81%d0%b0%d0%bd%d0%b4%d1%80%d0%b8%d0%b9%d1%81%d0%ba%d0%b0-%d0%b1%d0%b8%d0%b1/",
+        pictureUrl: "https://gutenbergpublishinghouse.files.wordpress.com/2020/07/10-fakta-za-drevnata-aleksandrijska-biblioteka-1.jpg"
+    }
+    let article13 = {
+        title: "Как е бил сътворен света според вавилонците",
+        text: "Всички слушали популярните митове и легенди за Сътворението на света. Но познаваме ли една от най-древните легенди – тази на Вавилон? „Енума елиш“ е заглавието, което е дадено на мита, съдържащ теологичните размисли от Вавилон през първото хилядолетие пр.н.е. Стилът и съдържанието на поемата я характеризират към новото религиозно течение от Вавилон, когато бог Мардук оглавява пантеона. Копия от мита са открити при разкопки на различни археологически обекти от Асирия и Вавилон, обхващащи периода от 1000 до 300 г. пр.н.е. До неотдавна често се твърдеше, че тази поема е съчинена през първата половина на второто хилядолетие преди Христа, но в последно време учените са склонни да изместят дата към втората половина на второто хилядолетие – последният период на Месопотамската цивилизация.",
+        link: "https://gutenbergpublishinghouse.wordpress.com/2020/07/02/%d0%ba%d0%b0%d0%ba-e-%d0%b1%d0%b8%d0%bb-%d1%81%d1%8a%d1%82%d0%b2%d0%be%d1%80%d0%b5%d0%bd-%d1%81%d0%b2%d0%b5%d1%82%d1%8a%d1%82-%d1%81%d0%bf%d0%be%d1%80%d0%b5%d0%b4-%d0%b2%d0%b0%d0%b2%d0%b8%d0%bb%d0%be/",
+        pictureUrl: "https://gutenbergpublishinghouse.files.wordpress.com/2020/06/kak-e-bil-satvoren-svetat-spored-vaviloncite-1.jpg"
+    }
+    let article14 = {
+        title: "Как една малко известна авторка завладя нови хоризонти",
+        text: "Заявяването на сексуланата свобода на жените в литературно произведение се оказва изгубена кауза през 1893 г., защото много хора още не са готови да приемат подобна позиция. Дори самата Еджъртън няма еднозначна позиция по този въпрос. Както казва Ибсен в своето изявление, че с \"Куклен дом\" не цели да се обяви в защита на женските права, така и Еджъртън засяга темата, но не задължително с цел да я изкара на политическата сцена.Еджъртън успява да отпечата своите разкази, които обхващат тази тема табу, на първо място благодарение на своя елиптичен модернистичен стил. Ако Еджъртън е била по-откровена и пряма в текстовете си, то тя най-вероятно би пострадала от цензурата.",
+        link: "https://gutenbergpublishinghouse.wordpress.com/2020/06/25/%d0%ba%d0%b0%d0%ba-%d0%b5%d0%b4%d0%bd%d0%b0-%d0%bc%d0%b0%d0%bb%d0%ba%d0%be-%d0%b8%d0%b7%d0%b2%d0%b5%d1%81%d1%82%d0%bd%d0%b0-%d0%b0%d0%b2%d1%82%d0%be%d1%80%d0%ba%d0%b0-%d0%bd%d0%b0-%d0%ba%d1%80%d0%b0/",
+        pictureUrl: "https://gutenbergpublishinghouse.files.wordpress.com/2020/06/kak-edna-malko-izvestna-avtorka-na-kratka-proza-zavladq-novi-literaturni-horizonti.jpg"
+    }
 
     articlesArr.push(articleZero);
     articlesArr.push(articleOne);
@@ -93,121 +116,41 @@ function displayArticles() {
     articlesArr.push(articleEight);
     articlesArr.push(articleNine);
     articlesArr.push(article10);
+    articlesArr.push(article11);
+    articlesArr.push(article12);
+    articlesArr.push(article13);
+    articlesArr.push(article14);
+    
 
-    //start from last article!
-    let articleIndex = articlesArr.length - 1;
+    //create list on the right
+    let articlesListDiv = document.getElementById("articlesList");
+    for (let i = articlesArr.length - 1; i >= 0; i--) {
+        let item = document.createElement("p");
+        item.id = i;
+        item.className = "listItem";
+        item.innerText = articlesArr[i].title;
+        item.addEventListener("click", function () {
+            selectArticle(item.id)
+        })
+        articlesListDiv.appendChild(item);
+    }
 
-
-    //create card container
-
-    let containerDiv = document.getElementById("articlesDiv");
-
-    //createCard 
-    let cardDiv = document.createElement("div");
-    cardDiv.className = "card";
-
-    //left
-    let leftArr = document.createElement("div");
-    leftArr.className = "leftArrow";
-    let leftArrImg = document.createElement("img");
-    leftArrImg.src = "articlesPictures/leftArr.png";
-    leftArrImg.className = "arrow"
-    leftArr.appendChild(leftArrImg);
-    leftArr.addEventListener("click", function () {
-        if (articleIndex < articlesArr.length - 1) {
-            articleIndex++;
-        }
-        previousArticle(articleIndex)
-    })
-    cardDiv.appendChild(leftArr);
-
-
-    //upper center
-    let imageAndtitleDiv = document.createElement("div");
-    imageAndtitleDiv.className = "imgAndTitle";
-    let titleH = document.createElement("h3");
-    titleH.innerText = articlesArr[articlesArr.length - 1].title;
-    imageAndtitleDiv.appendChild(titleH);
-
-    let img = document.createElement("img");
-    img.src = articlesArr[articlesArr.length - 1].pictureUrl;
-    img.className = "articlePicture";
-    imageAndtitleDiv.appendChild(img)
-    cardDiv.appendChild(imageAndtitleDiv);
-
-
-    //lower center
-    let textAndLinkDiv = document.createElement("div");
-    textAndLinkDiv.className = "txtAndLink";
-    let textP = document.createElement("p");
-    textP.innerText = articlesArr[articlesArr.length - 1].text;
-    textAndLinkDiv.appendChild(textP);
-
-    let link = document.createElement("a");
-    link.innerText = "Прочетете повече";
+    //set the first article
+    let title = document.getElementById("articleTitleP");
+    title.innerText = articlesArr[articlesArr.length - 1].title;
+    let image = document.getElementById("articleImage");
+    image.src = articlesArr[articlesArr.length - 1].pictureUrl;
+    let content = document.getElementById("articleContentP");
+    content.innerText = articlesArr[articlesArr.length - 1].text;
+    let link = document.getElementById("articleLink");
     link.href = articlesArr[articlesArr.length - 1].link;
-    link.className = "gutenbergLink";
-    link.target = "_blank";
-    textAndLinkDiv.appendChild(link);
 
-    cardDiv.appendChild(textAndLinkDiv);
-
-    //right
-    let rightArr = document.createElement("div");
-    rightArr.className = "rightArrow";
-    let rightArrImg = document.createElement("img");
-    rightArrImg.src = "articlesPictures/rightArr.png";
-    rightArrImg.className = "arrow";
-    rightArrImg.style.float = "right"
-
-    rightArr.appendChild(rightArrImg);
-    rightArr.addEventListener("click", function () {
-        if (articleIndex > 0) {
-            articleIndex--;
-        }
-
-        nextArticle(articleIndex)
-    })
-    cardDiv.appendChild(rightArr);
-
-    containerDiv.appendChild(cardDiv);
-
-
-    //function next article
-    function nextArticle(articleIndex) {
-        let currentIndex = articleIndex;
-        if (currentIndex > 0) {
-            let currentIndex = articleIndex - 1;
-        }
-        console.log(`indeksa na statiqta za vizualizaciq e ${currentIndex}`)
-
-        if (currentIndex >= 0) {
-            titleH.innerText = articlesArr[currentIndex].title;
-            img.src = articlesArr[currentIndex].pictureUrl;
-            img.className = "articlePicture";
-            textP.innerText = articlesArr[currentIndex].text;
-            link.href = articlesArr[currentIndex].link;
-
-        }
+    function selectArticle(id) {
+        console.log(articlesArr[id].title)
+        title.innerText = articlesArr[id].title;
+        content.innerText = articlesArr[id].text;
+        image.src = articlesArr[id].pictureUrl;
+        link.href = articlesArr[id].link;
     }
 
-    //function previous article
-    function previousArticle(articleIndex) {
-        let currentIndex = articleIndex;
-        if (currentIndex < articlesArr.length - 2) {
-            currentIndex = articleIndex++;
-        }
-        console.log(`indeksa na statiqta za vizualizaciq e ${currentIndex}`)
-
-        if (currentIndex < articlesArr.length) {
-            img.src = articlesArr[currentIndex].pictureUrl;
-            img.className = "articlePicture";
-            titleH.innerText = articlesArr[currentIndex].title;
-            textP.innerText = articlesArr[currentIndex].text;
-            link.href = articlesArr[currentIndex].link;
-
-        }
-    }
-
-    //end of main function
 }

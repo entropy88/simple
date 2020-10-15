@@ -1,8 +1,7 @@
 <!DOCTYPE html>
-
-<head>
+<html><head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161412518-1"></script>
+   
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -11,54 +10,93 @@
         gtag('config', 'UA-161412518-1');
     </script>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Статии и ревюта на книги">
-    <meta name="keywords"
-        content="отворена наука, open science, библиограф онлайн, библиография, използвана литература, безплатни ресурси, безплатни книги, безплатни аудио-книги, документални филми, космически изображения, книгоиздаване">
+    <meta name="keywords" content="отворена наука, open science, библиограф онлайн, библиография, използвана литература, безплатни ресурси, безплатни книги, безплатни аудио-книги, документални филми, космически изображения, книгоиздаване">
     <meta name="author" content="EntropyStarRover">
     <link rel="stylesheet" type="text/css" href="articles.css">
     <title>Статии</title>
-</head>
+
 
 <body onload="displayArticles()">
     <script src="articles.js"></script>
-    <script src="menu.js"></script>
 
+
+    <!-- 
+copied code starts here 
+more info at https://codepen.io/bholmesdev/pen/jOqoQRZ-->
+
+
+<header>
+    <nav id="main-nav">
+        <!-- <a class="logo" href="/">
+            <img src="navbar_logo.png" alt="Our professional logo (ideally an svg!)" />
+        </a> -->
+        <div class="dropdown-link-container">
+            <p class="navLinks" onclick="window.location.href = 'bib.html';">Библиограф онлайн</p>
+            <p class="navLinks" onclick="window.location.href = 'resources.html';"> Ресурси</p>
+            <p class="navLinks" onclick="window.location.href = 'about.html';">За сайта</p>
+            <p class="navLinks" onclick="window.location.href = 'spaceLover.html';">Космически календар</p>
+
+        </div>
+
+        <input type="image" id="image" alt="Menu" src="navbar_logo.png" class="mobile-dropdown-toggle"
+            aria-hidden="true">
+
+    </nav>
+</header>
+
+<script>const navElement = document.getElementById("main-nav");
+    const dropdownEl = document.querySelector(".dropdown-link-container");
+
+    document.addEventListener("click", (event) => {
+        if (event.target.classList.contains("mobile-dropdown-toggle")) {
+            navElement.classList.toggle("dropdown-opened");
+        }
+    });
+
+    document.addEventListener("click", (event) => {
+        // if we clicked on something inside our dropdown...
+        if (dropdownEl.contains(event.target)) {
+            navElement.classList.remove("dropdown-opened");
+        }
+    });
+</script>
+
+<!-- 
+copied code ends here -->
+
+
+    <div class="pageDescription">
+        <p> Страница за ревюта на книги и статии свързани с книгоиздаването и историята на книгата под авторството
+            на Иван Коларов. </p>
+       
+        <a href="https://gutenberg-bg.com/" target="_blank">
+            <img id="gtbgBaner" src="gutenberg_banner.jpg" alt="Издателска къща Гутенберг"></a>
+
+    </div>
     <div class="parent">
-        <div class="dropDownMenuDiv">
-            <img src="Chaosphere.png" id="chaosIcon" onclick="myMenu()" class="dropbtn"></img>
-            <div id="myDropdown" class="dropdown-content">
-                <button class="buttonsMenu" onclick="window.location.href = 'bib.html';">Библиограф онлайн</button>
-                <button class="buttonsMenu" onclick="window.location.href = 'articles.html';"> Статии</button>
-                <button class="buttonsMenu" onclick="window.location.href = 'resources.html';">Ресурси</button>
-                <button class="buttonsMenu" onclick="window.location.href = 'about.html';">За сайта</button>
+       
+
+        <div class="articlesList" id="articlesList">
             </div>
-        </div>
 
-
-
-        <div class="pageDescription">
-            <p> Страница за ревюта на книги и статии свързани с книгоиздаването и историята на книгата под авторството
-                на Иван Коларов.
-            </p>
-            <a href="https://gutenberg-bg.com/" target="_blank">
-                <img id="gtbgBaner" src="banner.jpg" alt="Издателска къща Гутенберг">
-            </a>
-        </div>
 
         <div class="contentDiv" id="articlesDiv">
+            <h3 id="articleTitleP">Default title</h3>
+            <img id="articleImage" src="articles_navbar_files/kak-edna-malko-izvestna-avtorka-na-kratka-proza-zavladq-novi.jpg">
+            <p id="articleContentP">default content.</p>
+            <a href="default link" id="articleLink" target="_blank" class="gutenbergLink">Прочетете повече</a>
+
+
         </div>
 
     </div>
-
     <footer class="footer">
-        <script
-            id="_wau3h6">var _wau = _wau || []; _wau.push(["colored", "vxztwv8tgf", "3h6", "5aff0e000000"]);</script>
-        <script async src="//waust.at/co.js"></script>
-        <p>Entropy 2020</p>
+        <script id="_wau3h6">var _wau = _wau || []; _wau.push(["colored", "vxztwv8tgf", "3h6", "5aff0e000000"]);</script><div style="position: relative; display: inline-block; background-image: url(&quot;http://widgets.amung.us/colwid/?c=5aff0e000000&quot;); width: 81px; height: 29px; padding: 0px; overflow: hidden; cursor: pointer; direction: ltr;" title="Click to see what's popular on this site!"><div style="position: absolute; top: 7px; padding: 0px; margin: 0px; overflow: visible; left: 43px;"><div style="background-image: url(&quot;http://widgets.amung.us/colwid/?c=5aff0e000000&quot;); background-repeat: no-repeat; background-attachment: scroll; background-position: -11px -29px; position: absolute; width: 6px; height: 14px; left: 0px; line-height: 14px; overflow: hidden; padding: 0px; margin: 0px;"></div></div></div>
+          <p>Entropy 2020</p>
     </footer>
 
-    <body>
+    
 
-        </html>
