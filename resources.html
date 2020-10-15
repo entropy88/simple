@@ -1,8 +1,16 @@
 <!DOCTYPE html>
+<html>
 
 <head>
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-161412518-1"></script>
+    <script async="" referrerpolicy="unsafe-url" type="text/javascript" src="resources_files/v2"></script>
+    <script async="" referrerpolicy="unsafe-url" type="text/javascript" src="resources_files/v2_003"></script>
+    <script async="" referrerpolicy="unsafe-url" type="text/javascript" src="resources_files/v2_004"></script>
+    <script async="" referrerpolicy="unsafe-url" type="text/javascript" src="resources_files/v2_002"></script>
+    <script async="" type="text/javascript" src="resources_files/tc.js"></script>
+    <script type="text/javascript" async="" src="resources_files/analytics.js"></script>
+    <script src="resources_files/a_003" async="" type="text/javascript"></script>
+    <script async="" src="resources_files/js"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
@@ -11,7 +19,7 @@
         gtag('config', 'UA-161412518-1');
     </script>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="безплатен достъп до научни ресурси">
     <meta name="keywords"
@@ -20,111 +28,159 @@
 
     <link rel="stylesheet" type="text/css" href="resources.css">
 
-    <link rel="shortcut icon" type="image/png" href="openScienceFavicon.ico"/>
+    <link rel="shortcut icon" type="image/png" href="http://entropysden.free.bg/openScienceFavicon.ico">
     <title>Интернет на знанието</title>
+    <script async="" defer="defer" src="resources_files/a" id="dtspv_4kjz"></script>
 </head>
 
 <body>
 
-    <script src="menu.js"></script>
+    <!-- 
+copied code starts here 
+more info at https://codepen.io/bholmesdev/pen/jOqoQRZ-->
 
-    <div class="parent">
-        <div class="dropDownMenuDiv">
-            <img src="Chaosphere.png" id="chaosIcon" onclick="myMenu()" class="dropbtn"></img>
-            <div id="myDropdown" class="dropdown-content">
-                <button class="buttonsMenu" onclick="window.location.href = 'bib.html';">Библиограф онлайн</button>
-                <button class="buttonsMenu" onclick="window.location.href = 'articles.html';"> Статии</button>
-                <button class="buttonsMenu" onclick="window.location.href = 'resources.html';">Ресурси</button>
-                <button class="buttonsMenu" onclick="window.location.href = 'about.html';">За сайта</button>
-            </div>
+
+<header>
+    <nav id="main-nav">
+        <!-- <a class="logo" href="/">
+            <img src="navbar_logo.png" alt="Our professional logo (ideally an svg!)" />
+        </a> -->
+        <div class="dropdown-link-container">
+            <p class="navLinks" onclick="window.location.href = 'bib.html';">Библиограф онлайн</p>
+            <p class="navLinks" onclick="window.location.href = 'articles.html';"> Статии</p>
+            <p class="navLinks" onclick="window.location.href = 'about.html';">За сайта</p>
+            <p class="navLinks" onclick="window.location.href = 'spaceLover.html';">Космически календар</p>
+
         </div>
 
+        <input type="image" id="image" alt="Menu" src="navbar_logo.png" class="mobile-dropdown-toggle"
+            aria-hidden="true">
+
+    </nav>
+</header>
+
+<script>const navElement = document.getElementById("main-nav");
+    const dropdownEl = document.querySelector(".dropdown-link-container");
+
+    document.addEventListener("click", (event) => {
+        if (event.target.classList.contains("mobile-dropdown-toggle")) {
+            navElement.classList.toggle("dropdown-opened");
+        }
+    });
+
+    document.addEventListener("click", (event) => {
+        // if we clicked on something inside our dropdown...
+        if (dropdownEl.contains(event.target)) {
+            navElement.classList.remove("dropdown-opened");
+        }
+    });
+</script>
+
+<!-- 
+copied code ends here -->
 
 
-        <div class="pageDescription">
-              <p>През тази страница можете да достъпите дигитални ресурси,
-                предоставени от тяхните създатели за <span style="background: whitesmoke;
+
+    <div class="pageDescription">
+        <p>През тази страница можете да достъпите дигитални ресурси,
+            предоставени от тяхните създатели за <span style="background: greenyellow;
                color:black"> <b>безплатно и законно</b></span> ползване без потребителска регистрация.
-            </p>
-        </div>
+        </p>
+    </div>
 
 
-        <div class="contentDiv">
-            <ul>
-                <li><img src="pics/nasa.png">
-                    <a href="spaceLover.html" target="_blank" class="title">Космически календар</a>
-                    <p class="desc">Малка страница за астрономическа информация</p>
-                </li>
+    <div class="contentDiv">
+        <ul>
 
-                <li><img src="pics/arxiv.jpg">
-                    <a href="https://arxiv.org//" target="_blank" class="title">ArXiv.org</a>
-                    <p class="desc">Безплатен достъп до над милион и половина електронни публикации в сферата на точните
-                        науки </p>
-                </li>
+            <li><img src="resources_files/nabis.JPG">
+                <a href="http://digilib.nalis.bg/xmlui/?locale-attribute=bg" target="_blank" class="title">НАБИС репозиториум</a>
+                <p class="desc">Дигитална  библиотека предоставяща достъп до дигиталните колекции на водещи библиотеки в България </p>
+            </li>
+            <li><img src="resources_files/arxiv.jpg">
+                <a href="https://arxiv.org//" target="_blank" class="title">ArXiv.org</a>
+                <p class="desc">Безплатен достъп до над милион и половина електронни публикации в сферата на точните
+                    науки </p>
+            </li>
 
-                <li><img src="pics/cyberleninka.png">
-                    <a href="https://cyberleninka.ru/" target="_blank" class="title">Cyberleninka</a>
-                    <p class="desc">Безплатен достъп до над два милиона рецензирани научни статии на руски език </p>
-                </li>
+            <li><img src="resources_files/cyberleninka.png">
+                <a href="https://cyberleninka.ru/" target="_blank" class="title">Cyberleninka</a>
+                <p class="desc">Безплатен достъп до над два милиона рецензирани научни статии на руски език </p>
+            </li>
 
-                <li><img src="pics/ebd-logo.png">
-                    <a href="http://www.e-booksdirectory.com/" target="_blank" class="title">E-books Directory</a>
-                    <p class="desc">Безплатен достъп до над 10 000 е-книги </p>
-                </li>
+            <li><img src="resources_files/ebd-logo.png">
+                <a href="http://www.e-booksdirectory.com/" target="_blank" class="title">E-books Directory</a>
+                <p class="desc">Безплатен достъп до над 10 000 е-книги </p>
+            </li>
 
-                <li><img src="pics/imslp.png">
-                    <a href="https://imslp.org/" target="_blank" class="title">IMSLP Petrucci Music Library</a>
-                    <p class="desc">Безплатен достъп до над 140 000 партитури</p>
-                </li>
+            <li><img src="resources_files/hindawi.png">
+                <a href="https://www.hindawi.com/" target="_blank" class="title">Hindawi</a>
+                <p class="desc">Безплатен пълнотекстов достъп до над 200 рецензирани научни списания </p>
+            </li>
 
-                <li><img src="pics/internet-archive-logo.png">
-                    <a href="https://archive.org/" target="_blank" class="title">The Internet Archive</a>
-                    <p class="desc">Безплатен достъп до книги, филми, емулирани игри и архивирани уеб
-                        страници</p>
-                </li>
+            <li><img src="resources_files/imslp.png">
+                <a href="https://imslp.org/" target="_blank" class="title">IMSLP Petrucci Music Library</a>
+                <p class="desc">Безплатен достъп до над 140 000 партитури</p>
+            </li>
 
-                <li><img src="pics/libriVoxLog.png">
-                    <a href="https://librivox.org/" target="_blank" class="title">LibriVox</a>
-                    <p class="desc">Безплатен достъп до над 13 000 аудио книги</p>
-                </li>
+            <li><img src="resources_files/internet-archive-logo.png">
+                <a href="https://archive.org/" target="_blank" class="title">The Internet Archive</a>
+                <p class="desc">Безплатен достъп до книги, филми, емулирани игри и архивирани уеб
+                    страници</p>
+            </li>
 
-                <li><img src="pics/uw2WE4E2AwA0QG6uaKNCfY7Am0u6zH6pZE8JlDKB.jpeg">
-                    <a href="http://www.openculture.com/" target="_blank" class="title">Open Culture</a>
-                    <p class="desc">Безплатен достъп до учебници, аудио книги, онлайн образователни курсове</p>
-                </li>
+            <li><img src="resources_files/libriVoxLog.png">
+                <a href="https://librivox.org/" target="_blank" class="title">LibriVox</a>
+                <p class="desc">Безплатен достъп до над 13 000 аудио книги</p>
+            </li>
 
-                <li><img src="pics/gutenbergLogo.jpg">
-                    <a href="https://www.gutenberg.org/" target="_blank" class="title">Project Gutenberg</a>
-                    <p class="desc">Безплатен достъп до над 60 000 електронни и аудио книги</p>
-                </li>
+            <li><img src="resources_files/uw2WE4E2AwA0QG6uaKNCfY7Am0u6zH6pZE8JlDKB.jpeg">
+                <a href="http://www.openculture.com/" target="_blank" class="title">Open Culture</a>
+                <p class="desc">Безплатен достъп до учебници, аудио книги, онлайн образователни курсове</p>
+            </li>
 
-                <li><img src="pics/scienceBooks.png">
-                    <a href="http://sciencebooksonline.info/" target="_blank" class="title">Science Books Online</a>
-                    <p class="desc">Безплатен достъп до научни монографии </p>
-                </li>
+            <li><img src="resources_files/plos.png">
+                <a href="https://plos.org/" target="_blank" class="title">PLOS</a>
+                <p class="desc">Безплатен достъп до десетки хиляди рецензирани научни и медицински статии</p>
+            </li>
 
-                <li><img src="pics/topDocumentary.png">
-                    <a href="https://topdocumentaryfilms.com//" target="_blank" class="title">Top Documentary Films</a>
-                    <p class="desc">Безплатен достъп до над 3000 документални филма</p>
-                </li>
+            <li><img src="resources_files/gutenbergLogo.jpg">
+                <a href="https://www.gutenberg.org/" target="_blank" class="title">Project Gutenberg</a>
+                <p class="desc">Безплатен достъп до над 60 000 електронни и аудио книги</p>
+            </li>
 
-                <li><img src="pics/w3schools.jpg">
-                    <a href="https://www.w3schools.com///" target="_blank" class="title">W3Schools</a>
-                    <p class="desc">Платформа за безплатно изучаване на езици за уеб програмиране </p>
-                </li>
+            <li><img src="resources_files/scienceBooks.png">
+                <a href="http://sciencebooksonline.info/" target="_blank" class="title">Science Books Online</a>
+                <p class="desc">Безплатен достъп до научни монографии </p>
+            </li>
 
-            </ul>
-        </div>
+            <li><img src="resources_files/topDocumentary.png">
+                <a href="https://topdocumentaryfilms.com//" target="_blank" class="title">Top Documentary Films</a>
+                <p class="desc">Безплатен достъп до над 3000 документални филма</p>
+            </li>
+
+            <li><img src="resources_files/w3schools.jpg">
+                <a href="https://www.w3schools.com///" target="_blank" class="title">W3Schools</a>
+                <p class="desc">Платформа за безплатно изучаване на езици за уеб програмиране </p>
+            </li>
+
+        </ul>
+    </div>
 
     </div>
 
     <footer class="footer">
         <script
             id="_wau3h6">var _wau = _wau || []; _wau.push(["colored", "vxztwv8tgf", "3h6", "5aff0e000000"]);</script>
-        <script async src="//waust.at/co.js"></script>
+        <div style="position: relative; display: inline-block; background-image: url(&quot;http://widgets.amung.us/colwid/?c=5aff0e000000&quot;); width: 81px; height: 29px; padding: 0px; overflow: hidden; cursor: pointer; direction: ltr;"
+            title="Click to see what's popular on this site!">
+            <div style="position: absolute; top: 7px; padding: 0px; margin: 0px; overflow: visible; left: 43px;">
+                <div
+                    style="background-image: url(&quot;http://widgets.amung.us/colwid/?c=5aff0e000000&quot;); background-repeat: no-repeat; background-attachment: scroll; background-position: -11px -29px; position: absolute; width: 6px; height: 14px; left: 0px; line-height: 14px; overflow: hidden; padding: 0px; margin: 0px;">
+                </div>
+            </div>
+        </div>
+        <script async="" src="resources_files/co.js"></script>
         <p>Entropy 2020</p>
     </footer>
 
-    <body>
-
-        </html>
+</body>
