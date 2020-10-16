@@ -1,10 +1,109 @@
+/* Yes, we wrapped our nav in a header tag.
+This allows us to add a background to the nav bar without 
+cutting off on our max-width property.
+To see what I mean, try moving this background to the nav element
+*/
+header {
+    background: #044343;
+    border: 1px solid gray;  
+  }
+  
+  nav {      
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    margin: auto;
+  }
+  
+  .logo {
+    margin-right: auto;
+  }
 
+  .dropdown-link-container {       
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .dropdown-link-container > a {
+    margin-left: 20px;
+  }
+  
+  .mobile-dropdown-toggle {
+    display: none;
+  }
+  
+  @media (max-width: 768px) {
+    .logo,
+    .mobile-dropdown-toggle {
+      z-index: 1;
+    }
+  
+    .mobile-dropdown-toggle {
+      display: initial;
+    }
+  
+    .dropdown-link-container {
+      /* first, make our dropdown cover the screen */
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 100vh;
+      /* fix nav height on mobile safari, where 100vh is a little off */
+      height: -webkit-fill-available;
+  
+      /* then, arrange our links top to bottom */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+  
+      /* add margins and padding to taste */
+      margin: 0;
+      padding-left: 7vw;
+      padding-right: 7vw;
+      background: #044343;
+      z-index: 0;
+  
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: transform 0.2s, opacity 0.2s;
+    }
+  
+    nav.dropdown-opened > .dropdown-link-container {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* this stuff isn't super important */
+  html {
+    font-family: sans-serif;
+  }
+  
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     color: aliceblue;
     background-color: #2d3436;
     background-image: linear-gradient(315deg, #044343 0%, #000000 74%);
 }
+
+.navLinks {
+    /* white-space: nowrap; */
+    background-color: black;
+    color: aliceblue;
+    padding: 1%;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 5%;
+    border: 1px solid gray;  
+  }
+  
+  .navLinks:hover {
+    background-image: linear-gradient(315deg, #044343 0%, #000000 74%);
+  }
 
 h1 {
     color: #045757;
@@ -20,28 +119,6 @@ a{
     color:aliceblue;
 }
 
-
-
-.menuDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-}
-
-
-.buttonsMenu {
-    background-color: black;
-    color:aliceblue;
-    padding: 1%;
-    font-weight: bold;
-    cursor: pointer;
-    border-radius: 5%;
-    border: 1px solid gray;
-}
-
-.buttonsMenu:hover {
-    background-color: rgba(194, 194, 194, 0.075);
-}
 
 
 .row {
@@ -125,8 +202,6 @@ a{
     text-align: right;
     font-size: smaller;
 }
-
-
 
 
 .footDiv {

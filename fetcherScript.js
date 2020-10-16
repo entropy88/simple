@@ -84,7 +84,8 @@ function starLover() {
 
 
     function getPictureOfTheDay() {
-        let imagContainer = document.getElementById("imageContainer")
+        let imagContainer = document.getElementById("imageContainer");
+        imagContainer.innerHTML="";
         fetch("https://api.nasa.gov/planetary/apod?api_key=LDeyRWIVB8jMycR2NGj0oGn1iLbluCDfSrJzebIn") // Call the fetch function passing the url of the API as a parameter
             .then((resp) => resp.json())
             .then(function (resp) {
@@ -112,6 +113,7 @@ function starLover() {
                     imgOfTheDay.setAttribute("src", resp.url);
                     imgOfTheDay.className = "starImage";
                     imagContainer.appendChild(imgOfTheDay);
+                    console.log("image appended");
 
                     //if response has hdurl
                     if (resp.hasOwnProperty("hdurl")) {
@@ -124,7 +126,7 @@ function starLover() {
 
                 if (resp.hasOwnProperty("copyright")) {
                      let copyP = document.createElement("p");
-                    copyP.innerText = `Р’В©${resp.copyright}`;
+                    copyP.innerText = `\xA9${resp.copyright}`;
                     copyP.className = "copyrightP";
                     imagContainer.appendChild(copyP);
 
