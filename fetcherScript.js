@@ -98,11 +98,12 @@ function starLover() {
 
 
                 if (resp.media_type == "video") {
-                    console.log("it's a video")
+                    let vContainer=document.createElement("div");
+                    vContainer.className="video-container";
                     let iframeVid = document.createElement("iframe");
                     iframeVid.setAttribute("src", resp.url);
-                    iframeVid.className = "starVideo"
-                    imagContainer.appendChild(iframeVid);
+                    vContainer.appendChild(iframeVid);
+                    imagContainer.appendChild(vContainer);
 
                 } else {
                     let description = document.createElement("p");
