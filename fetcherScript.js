@@ -90,6 +90,9 @@ function starLover() {
             .then((resp) => resp.json())
             .then(function (resp) {
 
+                let deskH=document.createElement("h2");
+                deskH.innerText="Космическо изображение на деня";
+                imagContainer.appendChild(deskH);
                 let title = document.createElement("p");
                 title.innerText = resp.title;
                 title.className = "titleP";
@@ -98,6 +101,9 @@ function starLover() {
 
 
                 if (resp.media_type == "video") {
+                    let deskH=document.createElement("h2");
+                    deskH.innerText="Космическо видео на деня";
+                    imagContainer.appendChild(deskH);
                     let vContainer=document.createElement("div");
                     vContainer.className="video-container";
                     let iframeVid = document.createElement("iframe");

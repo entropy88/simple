@@ -89,9 +89,7 @@ body {
     background-image: linear-gradient(315deg, #044343 0%, #000000 74%);
 }
 
-.navLinks {
-  
-
+.navLinks { 
   color: aliceblue;
   text-shadow: 1px 1px black;
   font-weight: bold;
@@ -112,6 +110,12 @@ h1 {
 h2 {
     color: #045757;
     text-shadow: 1px 1px #044343;
+}
+
+h3 {
+  color: #045757;
+  text-shadow: 1px 1px #044343;
+  font-size: larger;
 }
 
 a{
@@ -147,9 +151,9 @@ a{
 
   #moonContainer {
     width: min-content;
-    padding: 2%;
     align-content: right;
-    border-radius: 25px;
+   margin-left: 2%;
+  
 }
 
 #moonPicture {
@@ -167,6 +171,11 @@ a{
 
 .titleP {
     font-weight: bold;
+}
+
+.descriptionP {
+font-size: smaller;
+text-align: end;
 }
 
 .starImage {
@@ -207,10 +216,24 @@ a{
 
 
 
+
 .copyrightP {
     text-align: right;
     font-size: smaller;
 }
+
+.spaceDocu {
+ margin-left: 2%;
+}
+
+.docuLink{
+  text-decoration: none;
+}
+.docuLink:hover {
+color: greenyellow;
+text-decoration: underline;
+}
+
 
 
 .footDiv {
@@ -220,3 +243,7 @@ a{
     font-size: smaller;
     text-align: center;
 }		
+
+.footDiv a {
+  color:greenyellow;
+}
