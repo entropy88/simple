@@ -90,20 +90,16 @@ function starLover() {
             .then((resp) => resp.json())
             .then(function (resp) {
 
-                let deskH=document.createElement("h2");
-                deskH.innerText="Космическо изображение на деня";
-                imagContainer.appendChild(deskH);
-                let title = document.createElement("p");
-                title.innerText = resp.title;
-                title.className = "titleP";
-                imagContainer.appendChild(title);
-
-
+          
 
                 if (resp.media_type == "video") {
                     let deskH=document.createElement("h2");
                     deskH.innerText="Космическо видео на деня";
                     imagContainer.appendChild(deskH);
+                    let title = document.createElement("p");
+                    title.innerText = resp.title;
+                    title.className = "titleP";
+                    imagContainer.appendChild(title);
                     let vContainer=document.createElement("div");
                     vContainer.className="video-container";
                     let iframeVid = document.createElement("iframe");
@@ -112,6 +108,13 @@ function starLover() {
                     imagContainer.appendChild(vContainer);
 
                 } else {
+                    let deskH=document.createElement("h2");
+                    deskH.innerText="Космическо изображение на деня";
+                    imagContainer.appendChild(deskH);
+                    let title = document.createElement("p");
+                    title.innerText = resp.title;
+                    title.className = "titleP";
+                    imagContainer.appendChild(title);
                     let description = document.createElement("p");
                     description.innerText = "Кликнете на изображението за да го разгледате в пълна резолюция."
                     description.className = "descriptionP";
