@@ -2,6 +2,88 @@ function starLover() {
 
 
 
+    function getISSposition(){
+        let issDiv=document.getElementById("spaceStation");
+        issDiv.className="column";
+        console.log("hello there")
+        fetch("http://api.open-notify.org/iss-now.json") // Call the fetch function passing the url of the API as a parameter
+        .then((resp) => resp.json())
+        .then(function (resp) {
+            if(resp.message=="success"){
+                let positionH=document.createElement("h3");
+                positionH.innerText="Международната космическа станция в момента:";
+                issDiv.appendChild(positionH);
+                let pic=document.createElement("img");
+                pic.setAttribute("id", "issPic");
+                //move this shit to css
+                pic.src="iss.JPG";
+           
+
+                let speed=document.createElement("p");
+                speed.innerText="Орбитална скорост: 7706,6 m/s (27 743,8 km/h)";
+                issDiv.appendChild(speed);
+
+                let period=document.createElement("p");
+                period.innerText="Орбитален период:	91,34 минути";
+                issDiv.appendChild(period);
+                       
+
+                let coordinates=document.createElement("p");
+                coordinates.innerText="Координати:";
+                issDiv.appendChild(coordinates);
+                let long=document.createElement("p");
+                long.innerText=resp.iss_position.longitude;
+                issDiv.appendChild(long);
+                let lat=document.createElement("p");
+                lat.innerText=resp.iss_position.latitude;
+                issDiv.appendChild(lat);
+
+                issDiv.appendChild(pic);
+          
+                console.log(resp.iss_position.longitude);
+                console.log(resp.iss_position.latitude);
+            }
+
+        })
+        .catch(function () {
+            alert("нещо се обърка...")
+        });
+
+    }
+
+    function getISScrew(){
+        let issDiv=document.getElementById("spaceStation");
+
+        fetch("http://api.open-notify.org/astros.json") // Call the fetch function passing the url of the API as a parameter
+        .then((resp) => resp.json())
+        .then(function (resp) {
+            let crew=0;
+            let crewArr=[];
+            resp.people.forEach(p => {
+                if (p.craft=="ISS"){
+                    crew++;
+                    crewArr.push(p.name);
+                }
+            });
+            if (crew>0){
+                let label=document.createElement("p");
+                label.innerText="Екипаж в момента:";
+                issDiv.appendChild(label);
+
+                crewArr.forEach(crewMember=>{
+                    let astroname=document.createElement("p");
+                    astroname.innerText=crewMember;
+                    issDiv.appendChild(astroname);
+                })
+            }
+  
+        })
+        .catch(function () {
+            alert("нещо се обърка...")
+        });
+
+    }
+
     function getMoonInfo() {
 
         //http://www.farmsense.net/api/astro-widgets/ api adress
@@ -13,8 +95,7 @@ function starLover() {
         let timestamp = midnight.getTime() / 1000;
 
         let queryString = `http://api.farmsense.net/v1/moonphases/?d=${timestamp}`;
-        console.log(queryString)
-
+      
         let dateP = document.getElementById("date");
         let phaseP = document.getElementById("phase");
         let pictureI = document.getElementById("moonPicture");
@@ -152,6 +233,8 @@ function starLover() {
         window.open(url)
     }
 
+    getISSposition();
+    getISScrew();
     getMoonInfo();
     getPictureOfTheDay();
 }

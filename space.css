@@ -81,6 +81,7 @@ nav {
 /* this stuff isn't super important */
 html {
   font-family: sans-serif;
+  min-height: 100%;
 }
 body {
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -166,6 +167,13 @@ a{
     color: #045757;
     text-shadow: 1px 1px #044343;
     font-size: larger;
+}
+
+#issPic {
+height: 200px;
+width: 200px;
+border: 1px solid gray;
+
 }
 
 
