@@ -23,6 +23,10 @@
 
 <body onload="starLover();">
     <script src="fetcherScript.js"></script>
+    <script src="meteors.js"></script>
+
+
+
 
     <!-- 
 copied code starts here 
@@ -70,48 +74,29 @@ copied code ends here -->
     <div class="row">
 
         <div class="column" id="moonContainer">
-            <p id="date">Луната на 10/11</p>
+            <p id="date">Луната на 8/1</p>
             <p id="phase">Последна четвърт</p>
-            <img id="moonPicture">
+            <img id="moonPicture" src="waningCrescent.jpg">
 
 
-            <div id="spaceStation">
-                </div>
+    
             <h1>Предстоящи метеорни потоци</h1>
+            <div id="meteorShowers">
+            </div>
 
-
-            <p>17 Ноември, Вторник: 07:06<br>
-                Метеорен поток Леониди в съзвездието Лъв<br> ЗЧЧ = 15</p>
-
-            <p>14 Декември, Понеделник: 02:35<br>
-                Метеорен поток Джеминиди в съзвездието Близнаци<br> ЗЧЧ = 120</p>
-
-            <p>22 Декември, Вторник: 11:00<br>
-                Метеорен поток Урсиди в съзвездието Малка мечка<br> ЗЧЧ = 10</p>
-
-                <h3>2021</h3>
-
-            <p>03 Януари, Неделя: 16:47<br>
-                Метеорен поток Квадрантиди в съзвездията Воловар, Дракон и Херкулес<br> ЗЧЧ = 120</p>
-
-            <p>22 Април, Четвъртък: 14:16<br>
-                Метеорен поток Лириди в съзвездието Лира<br> ЗЧЧ = 20</p>
-
-            <p>05 Май, Сряда: 03:30<br>
-                Метеорен поток ηАквариди в съзвездието Водолей<br> ЗЧЧ = 60</p>
-
-            <p>28 Юли, Петък: 05:17<br>
-                Метеорен поток δАквариди в съзвездието Водолей<br> ЗЧЧ = 20</p>
-
-            <p>12 Август, Четвъртък: 21:11<br>
-                Метеорен поток Персеиди в съзвездието Персей<br> ЗЧЧ = 90</p>
-
-            <p>21 Октомври, Четвъртък: 13:30<br>
-                Метеорен поток Ориониди в съзвездието Орион<br> ЗЧЧ = 20</p>
+            <script>
+                getMeteors();
+            </script>
 
         </div>
 
-        <div class="column" id="imageContainer"><h2>Космическо изображение на деня</h2><p class="titleP">The Central Soul Nebula Without Stars</p><p class="descriptionP">Кликнете на изображението за да го разгледате в пълна резолюция.</p></div>
+        <div class="column" id="imageContainer"><h2>Космическо изображение на деня</h2><p class="titleP">NGC 1365: Majestic Island Universe</p><p class="descriptionP">Кликнете на изображението за да го разгледате в пълна резолюция.</p><img src="space0801_files/NGC-1365-RGB-19-DEC-2020_Leo_Mike_1024.jpg" class="starImage"><p class="copyrightP">©island universe</p></div>
+
+        <div class="column" id="spaceStation">
+            <div id="issPosition"><h3>Международната космическа станция в момента:</h3><p>Орбитална скорост: 7706,6 m/s (27 743,8 km/h)</p><p>Орбитален период:	91,34 минути</p><p>Координати:</p><p>161.0368</p><p>-43.2067</p><img id="issPic" src="space0801_files/iss.jpg"></div>
+            <div id="issCrew"><p>Екипаж в момента:</p><p>Sergey Ryzhikov</p><p>Kate Rubins</p><p>Sergey Kud-Sverchkov</p><p>Mike Hopkins</p><p>Victor Glover</p><p>Shannon Walker</p><p>Soichi Noguchi</p></div>
+
+        </div>
 
 
     </div>
@@ -121,22 +106,30 @@ copied code ends here -->
         <h3>Любими документални филми в Youtube:</h3>
 
         <a href="https://www.youtube.com/playlist?list=PL4RqbJr2LxAm30vXyBnRFovMJxxM-5S6y" class="docuLink" target="_blank">Carl Sagan's Cosmos (PBS);</a>
+
+
+        <a href="https://www.youtube.com/watch?v=0rHUDWjR5gg&amp;list=PL8dPuuaLjXtPAJr1ysd5yGIyiSFuh0mIL" class="docuLink" target="_blank">Crash Course Astronomy with  Phil Plait;</a>
+
         <a href="https://www.youtube.com/playlist?list=PLJxFQkgtmYdihW5By38HcyTWC7WVGByH1" class="docuLink" target="_blank">Hyperspace with Sam Neil (BBC);</a>
         <a href="https://www.youtube.com/playlist?list=PLUWhjoyyyez-TkczeV5852WvYoehmVtxo" class="docuLink" target="_blank">A Traveler's Guide to the Planets (National Geographic);</a>
         <a href="https://www.youtube.com/watch?v=bVQpwxgMQCg" target="_blank" class="docuLink">Journey to the Edge of
             the Universe with Alec Baldwin(National Geographic);</a>
-        <a href="https://www.youtube.com/watch?v=VVahc9dbx9g&amp;t=63s" class="docuLink" target="_blank">Life of a Universe
+        <a href="https://www.youtube.com/watch?v=VVahc9dbx9g&amp;t=63s" class="docuLink" target="_blank">Life of a
+            Universe
             with Brian Cox;</a>
 
     </div>
 
 
     <div class="footDiv">
-        <p>Лунните фази използват данни от <a href="http://www.farmsense.net/" target="_blank">farmsense.net</a>. Космическото
+        <p>Лунните фази използват данни от <a href="http://www.farmsense.net/" target="_blank">farmsense.net</a>.
+            Космическото
             изображение/видео на деня се
             извлича
-            от <a href="https://apod.nasa.gov/apod/" target="_blank">NASA APOD</a>. Информацията за метеорните потоци се извлича от<a href="https://eclipse.gsfc.nasa.gov/SKYCAL/SKYCAL.html" target="_blank">
-                NASA SKYCAL.</a></p><a href="https://eclipse.gsfc.nasa.gov/SKYCAL/SKYCAL.html" target="_blank"></a> Информацията за Mеждународната космическа станция се извлича от <a href="http://open-notify.org/" target="_blank">open-notify.org
+            от <a href="https://apod.nasa.gov/apod/" target="_blank">NASA APOD</a>. Информацията за метеорните потоци се
+            извлича от<a href="https://eclipse.gsfc.nasa.gov/SKYCAL/SKYCAL.html" target="_blank">
+                NASA SKYCAL.</a></p><a href="https://eclipse.gsfc.nasa.gov/SKYCAL/SKYCAL.html" target="_blank"></a>
+        Информацията за Mеждународната космическа станция се извлича от <a href="http://open-notify.org/" target="_blank">open-notify.org
 
         </a>
     </div><a href="https://eclipse.gsfc.nasa.gov/SKYCAL/SKYCAL.html">
@@ -144,6 +137,8 @@ copied code ends here -->
 
 
     </a>
+
+
 
 
 </body></html>
